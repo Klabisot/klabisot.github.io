@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Commissions Price List</title>
+    <!-- <link rel="icon" href="https://cdn.7tv.app/emote/6425ea32e56d784af090f3ed/2x.webp"> -->
+    <meta content="Klabisot's Commissions Price List" property="og:title" />
+    <meta content="https://x.com/klabisot" property="og:url" />
+    <meta content="https://lh3.googleusercontent.com/d/1TJi2MSSlX9yusps0CBWic5JzCc7qstFH" property="og:image" />
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="library">
+                <h2>Options</h2>
+                <!-- <p>Сверху можно воспользоваться поиском, стрелками ↑ ↓ можно листать библиотеку</p> -->
+                <!-- <fieldset>
+                    <legend>Shot</legend>
+                
+                    <input type="radio" id="headshot" name="shot" />
+                    <label for="headshot">Headshot</label><br />
+                
+                    <input type="radio" id="halfbody" name="shot" />
+                    <label for="halfbody">Halfbody</label><br />
+                
+                    <input type="radio" id="fullbody" name="shot" />
+                    <label for="fullbody">Fullbody</label>
+                </fieldset> -->
+                <table>
+                    <tr>
+                        <th style="border: none;">
+
+                        </th>
+                        <th class="cols">
+                            Sketch
+                        </th>
+                        <th class="cols">
+                            Light render
+                        </th>
+                        <th class="cols">
+                            Full render
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="label">
+                            Headshot
+                        </th>
+                        <th class="price active">5</th>
+                        <th class="price">12</th>
+                        <th class="price">20</th>
+                    </tr>
+                    <tr>
+                        <th class="label">
+                            Halfbody
+                        </th>
+                        <th class="price">7</th>
+                        <th class="price">20</th>
+                        <th class="price">40</th>
+                    </tr>
+                    <tr>
+                        <th class="label">
+                            Fullbody
+                        </th>
+                        <th class="price">10</th>
+                        <th class="price">30</th>
+                        <th class="price">65</th>
+                    </tr>
+                </table>
+                <p class="under-table">Click your desired option</p>
+                <!-- <fieldset>
+                    <legend>Render</legend>
+                
+                    <input type="radio" id="sketch" name="render" />
+                    <label for="sketch">Sketch</label><br />
+                
+                    <input type="radio" id="line-basic" name="render" />
+                    <label for="line-basic">Line + basic coloring</label><br />
+                
+                    <input type="radio" id="full-render" name="render" />
+                    <label for="full-render">Full render</label>
+                </fieldset> -->
+                <fieldset class="bg">
+                    <legend>Background</legend>
+                
+                    <div class="bg-option">
+                        <input type="radio" id="simple-bg" name="bg" value="0" checked/>
+                        <label for="simple-bg">
+                            Simple background ($0)<br>
+                            <p>One colored, gradients, patterns, etc</p>
+                        </label>
+                    </div>
+                
+                    <div class="bg-option">
+                        <div class="complex" style="opacity: 25%;">
+                            <input type="radio" id="complex-bg" name="bg" value="25"/>
+                            <label for="complex-bg">
+                                Complex background (+25% $)<br>
+                                <p>
+                                    Will match choosen option (basic coloring or full render)<br>
+                                    Scenery, interiors, etc.<br>
+                                    Not available for sketch options</p>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="additional">
+                    <legend>Additional characters (+50% $ each)</legend>
+                
+                    <!-- <input type="number" id="additional-chars" name="bg" value="1"/> -->
+                    <div class="additional-options">
+                        <div class="additional-option active">0</div>
+                        <div class="additional-option">1</div>
+                        <div class="additional-option">2</div>
+                        <div class="additional-option">3</div>
+                    </div>
+                    <p><!-- +75% $ for every additional character<br> -->
+                        Maximum of 3 additional characters<br>
+                        Note that this option means you will get single piece with additional characters<br>
+                        If you want two pieces with different characters - you have to make separate orders</p>
+                </fieldset>
+                <div class="estimated">
+                    <h2 class="right">Estimated price</h2>
+                    <p class="choosen-options">Headshot & sketch ($5)</p>
+                    <h3 class="right estimated-price">~300$</h3>
+                </div>
+            </div>
+            <div class="will-and-wont-draw">
+                <div class="info-container">
+                    <div class="info">
+                        <h2>Slots</h2>
+                        <p>1/1 slots available</p>
+                    </div>
+
+                    <div class="info">
+                        <h2>Will draw</h2>
+                        <ul>
+                            <li>Females</li>
+                            <li>Something cute or/and beautiful</li>
+                            <li>Light nudity</li>
+                        </ul>
+                    </div>
+
+                    <div class="info">
+                        <h2>Will NOT draw</h2>
+                        <ul>
+                            <li>Males</li>
+                            <li>NSFW (sexualized connotation, sex scenes, fetishes, and so on)</li>
+                            <li>Furry</li>
+                            <li>Non-human characters</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-container">
+                    <div class="info">
+                        <h2>Deadlines</h2>
+                        <ul>
+                            <li>For sketches and base coloring deadline is somewhere around <u>2-3 weeks</u><br></li>
+                            <li>For full render deadline is <u>1 month</u><br></li>
+                            <li>For complex backgrounds and additional characters the deadline could get bigger<br></li>
+                            <li>❗ But I won't promise anything considering my life situation ❗</li>
+                        </ul>
+                    </div>
+
+                    <div class="info">
+                        <h2>Extra info</h2>
+                        <ul>
+                            <li>Final price may change slightly after I receive the commission details, references, etc.</li>
+                            <li>For example, complex design or 2+ versions of piece will increase the final price</li>
+                            <li>Significant details (vehicles, pets, etc.) will increase the final price too</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-container">
+                    <div class="info">
+                        <h2>Payment</h2>
+                        <ul>
+                            <li><a href="https://boosty.to/dreamy_lounge">Boosty (Russian alternative for Patreon) (clickable)</a><br>I deeply apologize, but this is the only option</li>
+                            <li>Full prepayment for ≤$15</li>
+                            <li>50% prepayment for $16 or more</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info">
+                        <h2>Agreement</h2>
+                        <p>Making an order you are agreeing with everything written on this page<br>Please mind it</p>
+                    </div>
+                </div>
+            </div>
+            <div class="posts">
+                <h2>Examples</h2>
+                <div class="img-container">
+                    <!-- <img src="https://placehold.co/700x1000"/>
+                    <img src="https://placehold.co/800x1000"/>
+                    <img src="https://placehold.co/700x1000"/>
+                    <img src="https://placehold.co/400x1000"/>
+                    <img src="https://placehold.co/700x1000"/>
+                    <img src="https://placehold.co/1000x1000"/> -->
+                    <!-- 
+                    sk - sketch
+                    lr - light render
+                    fr - full render
+
+                    hs - headshot
+                    hb - halfbody
+                    fb - fullbody
+
+                    sbg - simple background
+                    cbg - complex background
+                    -->
+                    <img class="example fr fb sbg" src="https://lh3.googleusercontent.com/d/12jaBTHqJHRVIZzltYgJKZf-d-LaRDV1X"/>
+                    <img class="example fr hb sbg" src="https://lh3.googleusercontent.com/d/18h8Ma4LTSF_WK5exXrM0vmYVm1uAghBG"/>
+                    <img class="example fr hb sbg" src="https://lh3.googleusercontent.com/d/1DESb4dhqIdacUxNh0cJoFbyaY5YvXYZC"/>
+                    <img class="example lr hb sbg" src="https://lh3.googleusercontent.com/d/1FZSTNb5Z3Tm6LVm1fV6ddEOlymVvKKxL"/>
+                    <img class="example fr hb sbg" src="https://lh3.googleusercontent.com/d/1GytULpU9LnHBDRiyUxc5mc73JMGexywu"/>
+                    <img class="example fr fb sbg" src="https://lh3.googleusercontent.com/d/1IaffHsU7QyNiWy30VjpNYEK3rlKmPLhn"/>
+                    <img class="example fr hb sbg" src="https://lh3.googleusercontent.com/d/1WgJdtfElG55LDpEpBW7lc_ah3uCTli4L"/>
+                    <img class="example fr fb cbg" src="https://lh3.googleusercontent.com/d/1WmTYjf2RO1par0E2D4Z9CHtl5HjuOMli"/>
+                    <img class="example lr hb sbg" src="https://lh3.googleusercontent.com/d/1Xo50ViU_ZhP9eWoaSGYxW4kAfBQXfK0d"/>
+                    <img class="example fr fb sbg" src="https://lh3.googleusercontent.com/d/1Ysy8uNf48MUwoFPEdOyFNIGNc1cEvl5w"/>
+                    <img class="example lr hb sbg" src="https://lh3.googleusercontent.com/d/1mK5cMVkQZpswacOlBdjr_lKFoZbPjpa5"/>
+                    <img class="example fr fb sbg" src="https://lh3.googleusercontent.com/d/1n8sgM8-7HdvJ9r5AkoHxcb5YrEOkrdt2"/>
+                    <img class="example fr fb sbg" src="https://lh3.googleusercontent.com/d/1qQlUIxcqch5Sf5yQyqTnXyPBz7x9vAfG"/>
+                    <img class="example fr hb sbg" src="https://lh3.googleusercontent.com/d/1vsV1lhc3eg8-yn7Lt8boE6CpJdUgdU74"/>
+                    <img class="example fr hb cbg" src="https://lh3.googleusercontent.com/d/1zwl-eFxAl3bn4g_XgcYU2GP1nmCVUPMQ"/>
+
+                    <img class="example fr fb cbg" src="https://lh3.googleusercontent.com/d/15Xosnrk8ScUQ21TUfi05AsLiXTKTL5RR"/>
+                    <img class="example fr hb cbg" src="https://lh3.googleusercontent.com/d/1AuF04wH8Ft-NECH7Fxv0FdzPi56pkw2m"/>
+                    <img class="example fr fb cbg" src="https://lh3.googleusercontent.com/d/1BW4-3hbbeFZub9YGBnS20lawqdqhDeXN"/>
+                    <img class="example fr fb cbg" src="https://lh3.googleusercontent.com/d/1FzXiECMAd4_1CTMMWGxNGvZo4pdRH0h-"/>
+                    <img class="example fr hb sbg" src="https://lh3.googleusercontent.com/d/1NRHRASDvYR_9CAKVPC7cZxGwwD-4e3vV"/>
+                    <img class="example lr hb sbg" src="https://lh3.googleusercontent.com/d/1RFU2t4qrwf3ocxhFbcLTz1BJqjyyHITp"/>
+                    <img class="example lr fb sbg" src="https://lh3.googleusercontent.com/d/1xFGGU-hhOvEymJYVBRgko95WJJvRF_uG"/>
+                    <img class="example lr hb cbg" src="https://lh3.googleusercontent.com/d/1V9P0u4-wy7lF3pgI51O2zuciAFf47aIl"/>
+                    <img class="example lr fb cbg" src="https://lh3.googleusercontent.com/d/1V9P0u4-wy7lF3pgI51O2zuciAFf47aIl"/>
+                    <img class="example fr hb cbg" src="https://lh3.googleusercontent.com/d/1WoauB4-_7HrXQuw344YwnH7aJg9trsXH"/>
+                    <img class="example fr fb sbg" src="https://lh3.googleusercontent.com/d/1uWw5Z0xY1S8jyvBewYDmbWgJ7sDL50a6"/>
+
+                    <img class="example lr hb sbg" src="https://lh3.googleusercontent.com/d/14Cl-6IHLLym4yPfWvI59OIUyPpIoRHnG"/>
+                    <img class="example lr fb sbg" src="https://lh3.googleusercontent.com/d/12xWv4jnrPCovTSPbi3PcfypUIOqsNcpp"/>
+
+                    <img class="example fr hs sbg" src="https://lh3.googleusercontent.com/d/1TJi2MSSlX9yusps0CBWic5JzCc7qstFH"/>
+                    <img class="example lr hs cbg" src="https://lh3.googleusercontent.com/d/1t8W1qTAqKc3ARbtNjxTgDByw8cpzHu9k"/>
+                    <img class="example fr hs cbg" src="https://lh3.googleusercontent.com/d/1uj9yjr0n7oM7D0NhZOKG1hBm3119W9Yx"/>
+                    <img class="example lr hs sbg" src="https://lh3.googleusercontent.com/d/15x6azOSM1FeFK3Qfda_Ha4cC3nwzTjTV"/>
+
+                    <img class="example sk hb sbg" src="https://lh3.googleusercontent.com/d/1kOKFShbCZ4OWYsydF9k4wFsPyjYDhlem"/>
+                    <img class="example sk hb sbg" src="https://lh3.googleusercontent.com/d/1-DMZxoqUx0_G-_GEgNym8AWfT1Pv1d2x"/>
+                    <img class="example sk fb sbg" src="https://lh3.googleusercontent.com/d/18jUVXBsEWuqt-_wOg0Z3CkswQ5KUbU7A"/>
+                    <img class="example sk hs sbg" src="https://lh3.googleusercontent.com/d/1EK8lyPdkKSMFaAVV7nD7sV-YRgb4rYJ9"/>
+                    <img class="example sk fb sbg" src="https://lh3.googleusercontent.com/d/1E_BeS_sM0yio_uB26uOqkA7qchsVOOvU"/>
+                    <img class="example sk hb sbg" src="https://lh3.googleusercontent.com/d/1MsqgAcSwfvjt8kZ_z9c__38xECYaLNt3"/>
+                    <img class="example sk hb sbg" src="https://lh3.googleusercontent.com/d/1vHX2md-EttUeYWhjSoXaUrQ05rFI5g5h"/>
+                    <img class="example sk fb sbg" src="https://lh3.googleusercontent.com/d/1yrX5H1Guykpgs8DIwEvrJ4rmcO3Iw6-P"/>
+                </div>
+                <p class="no-examples">no examples :(</p>
+            </div>
+        </div>
+        <!-- <div class="author">
+            <img src="https://cdn.7tv.app/emote/63daf2cf60cfb462b9e1b028/1x.webp"/> страницу создал klabisot<br>
+            спамьте пастами в тему, пожалуйста<br>
+            <a href="https://ttvfreaks.github.io/mf_kitchen">Кухня паст Маятника Фуко</a><br>
+            <a href="https://www.radiorecord.ru/station/mf">Радио Маятник Фуко</a><br>
+            <a href="https://pikuco.ru/tests/94602/">Тест от megazhizha</a><br>
+            <a href="https://pikuco.ru/tests/95161/">Тест от kuriyani</a>
+        </div> -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
