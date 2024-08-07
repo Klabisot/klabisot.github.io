@@ -1,14 +1,57 @@
 * {
-    font-family: "Montserrat", sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 
     color: white;
 }
+h1, h2, h3, h4, h5, h6{
+    font-family: "Platypi", sans-serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+}
+p, li{
+    line-height: 115%;
+}
+p{
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    opacity: 70%;
+}
+h2{
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+h3{
+    margin: 0;
+    width: 100%;
+}
+.right{
+    text-align: right;
+}
 
 body {
-    background-color: rgb(26, 25, 34);
+    height: 100vh;
+    margin: 0;
+    /* background-color: rgb(26, 25, 34); */
+    background-image: linear-gradient(
+        var(--angle),
+        hsl(246deg 26% 22%) 0%,
+        hsl(244deg 44% 14%) 31%,
+        hsl(244deg 63% 5%) 100%
+    );
+	animation: gradient 25s linear infinite;
 }
+@keyframes gradient {
+	to { --angle: 360deg; }
+}
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -29,22 +72,6 @@ body {
     background: #555;
 } 
 
-p{
-    margin: 0;
-    padding: 0;
-    font-size: 11px;
-    opacity: 70%;
-}
-h2{
-    margin-bottom: 0;
-}
-h3{
-    margin: 0;
-    width: 100%;
-}
-.right{
-    text-align: right;
-}
 
 .library, .posts, .lyrics {
     flex: 1;
@@ -129,7 +156,7 @@ th, td{
 }
 .estimated p{
     text-align: right;
-    padding-bottom: 5px;
+    padding: 5px 0;
 }
 
 .slots{
