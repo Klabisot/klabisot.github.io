@@ -81,6 +81,14 @@ body {
     width: 100%;
     height: 100%;
 }
+#bg-blend{
+    position: relative;
+    background-color: rgba(7, 7, 14, 0.4);
+    background-blend-mode: hard-light;
+    width: 100%;
+    height: 100%;
+    z-index: 40;
+}
 
 ::-webkit-scrollbar {
     width: 5px;
@@ -348,8 +356,6 @@ ul{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: rgba(7, 7, 14, 0.6);
-    /* background-blend-mode: color; */
     /* background: url("https://www.radiorecord.ru/upload/iblock/2cd/mfdsk.jpeg");
     background-repeat: no-repeat;
     background-position: center;
