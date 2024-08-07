@@ -555,7 +555,7 @@ ul{
         width: calc(100% - 30px);
     }
     .info-container{
-        display: flex;
+        display: block;
         flex: 1;
     }
     .info{
