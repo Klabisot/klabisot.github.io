@@ -348,7 +348,7 @@ ul{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: rgba(7, 7, 14, 0.4);
+    background-color: rgba(7, 7, 14, 0.6);
     /* background-blend-mode: color; */
     /* background: url("https://www.radiorecord.ru/upload/iblock/2cd/mfdsk.jpeg");
     background-repeat: no-repeat;
