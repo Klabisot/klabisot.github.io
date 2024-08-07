@@ -10,8 +10,9 @@ h1, h2, h3, h4, h5, h6{
     font-optical-sizing: auto;
     font-style: italic;
 }
-p, li{
+p, li, a, u{
     line-height: 115%;
+    color:#ddd9fd;
 }
 p{
     margin: 0;
@@ -22,7 +23,7 @@ p{
 h2{
     margin-bottom: 5px;
     font-size: 28px;
-    color: #ddd9fd;
+    color: rgb(221, 217, 253);
     text-shadow: #ddd9fd 0px 0 3px;
     /* text-decoration: dashed; */
 }
@@ -64,6 +65,21 @@ body {
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
+}
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}  
+#bg canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -331,7 +347,9 @@ ul{
 .container {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 20px);
+    height: 100vh;
+    background-color: rgba(7, 7, 14, 0.4);
+    /* background-blend-mode: color; */
     /* background: url("https://www.radiorecord.ru/upload/iblock/2cd/mfdsk.jpeg");
     background-repeat: no-repeat;
     background-position: center;
