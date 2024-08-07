@@ -22,6 +22,11 @@ p{
 h2{
     margin-bottom: 5px;
     font-size: 28px;
+    color: #ddd9fd;
+    /* text-decoration: dashed; */
+}
+h2, .label, .cols, legend, label{
+    color: #ddd9fd;
 }
 h3{
     margin: 0;
@@ -37,9 +42,13 @@ body {
     /* background-color: rgb(26, 25, 34); */
     background-image: linear-gradient(
         var(--angle),
-        hsl(246deg 26% 22%) 0%,
-        hsl(244deg 44% 14%) 31%,
-        hsl(244deg 63% 5%) 100%
+        hsl(229deg 25% 21%) 0%,
+        hsl(230deg 32% 18%) 8%,
+        hsl(232deg 38% 16%) 19%,
+        hsl(234deg 43% 13%) 31%,
+        hsl(233deg 51% 10%) 47%,
+        hsl(235deg 56% 8%) 66%,
+        hsl(236deg 63% 5%) 100%
     );
 	animation: gradient 25s linear infinite;
 }
@@ -85,7 +94,8 @@ body {
 }
 fieldset{
     margin-top: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
+    border-color: #ddd9fd;
 }
 .bg p{
     padding-left: 25px;
@@ -98,16 +108,44 @@ fieldset{
 
 table{
     margin-top: 10px;
-    border-collapse: collapse; 
+    border-collapse: separate !important; 
+    border-spacing: 0;
     cursor: default;
     width: 100%;
 }
 th, td{
-    border: 1px solid white;
+    border:         2px solid #ddd9fd;
+    border-bottom: none;
+    border-right: none;
+}
+.cols{
+    border-top:     2px solid #ddd9fd;
+}
+.label{
+    border-left:    2px solid #ddd9fd;
+}
+tr:last-child th{
+    border-bottom:  2px solid #ddd9fd;
+}
+tr th:last-child{
+    border-right:   2px solid #ddd9fd;
+}
+tr:nth-child(2) .label, .border-here{
+    border-top-left-radius:     10px;
+}
+.cols:last-child{
+    border-top-right-radius:    10px;
+}
+tr:last-child .label{
+    border-bottom-left-radius:  10px;
+}
+tr:last-child th:last-child{
+    border-bottom-right-radius: 10px;
 }
 .cols, .label{
     padding: 3px 0;
 }
+
 .under-table{
     padding-left: 5px;
     padding-top: 5px;
@@ -115,15 +153,16 @@ th, td{
 }
 .price{
     font-weight: normal;   
+    color: #ddd9fd;
 }
 .price:hover{
-    background: #414141;
+    background: #47455f;
 }
 .price::before{
     content: '$';
 }
 .price.active{
-    background: white;
+    background: #ddd9fd;
     color: black;
 }
 
@@ -138,14 +177,16 @@ th, td{
     padding: 5px;
     margin: 5px;
 
-    border: 1px solid white;
+    border: 1px solid #ddd9fd;
     border-radius: 10px;
+
+    color: #ddd9fd;
 }
 .additional-option:hover{
-    background: #414141;
+    background: #47455f;
 }
 .additional-option.active{
-    background: white;
+    background: #ddd9fd;
     color: black;
 }
 .estimated{
@@ -157,6 +198,9 @@ th, td{
 .estimated p{
     text-align: right;
     padding: 5px 0;
+}
+.estimated-price{
+    text-decoration: underline;
 }
 
 .slots{
