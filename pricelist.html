@@ -32,46 +32,86 @@
                     <input type="radio" id="fullbody" name="shot" />
                     <label for="fullbody">Fullbody</label>
                 </fieldset> -->
-                <table>
-                    <tr>
-                        <th style="border: none;">
-
-                        </th>
-                        <th class="cols border-here">
-                            Sketch
-                        </th>
-                        <th class="cols">
-                            Light render
-                        </th>
-                        <th class="cols">
-                            Full render
-                        </th>
-                    </tr>
-                    <tr>
-                        <th class="label">
-                            Headshot
-                        </th>
-                        <th class="price active">7</th>
-                        <th class="price">15</th>
-                        <th class="price">20</th>
-                    </tr>
-                    <tr>
-                        <th class="label">
-                            Halfbody
-                        </th>
-                        <th class="price">10</th>
-                        <th class="price">25</th>
-                        <th class="price">45</th>
-                    </tr>
-                    <tr>
-                        <th class="label">
-                            Fullbody
-                        </th>
-                        <th class="price">15</th>
-                        <th class="price">35</th>
-                        <th class="price">65</th>
-                    </tr>
-                </table>
+                <div class="table">
+                    <table class="not-blurred">
+                        <tr>
+                            <th style="border: none;">
+                            </th>
+                            <th class="cols border-here">
+                                Sketch
+                            </th>
+                            <th class="cols">
+                                Light render
+                            </th>
+                            <th class="cols">
+                                Full render
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="label">
+                                Headshot
+                            </th>
+                            <th class="price active">7</th>
+                            <th class="price">15</th>
+                            <th class="price">20</th>
+                        </tr>
+                        <tr>
+                            <th class="label">
+                                Halfbody
+                            </th>
+                            <th class="price">10</th>
+                            <th class="price">25</th>
+                            <th class="price">45</th>
+                        </tr>
+                        <tr>
+                            <th class="label">
+                                Fullbody
+                            </th>
+                            <th class="price">15</th>
+                            <th class="price">35</th>
+                            <th class="price">65</th>
+                        </tr>
+                    </table>
+                    <table class="blurred">
+                        <tr>
+                            <th style="border: none;">
+                            </th>
+                            <th class="cols border-here">
+                                <span class="hide-text">Sketch</span>
+                            </th>
+                            <th class="cols">
+                                <span class="hide-text">Light render</span>
+                            </th>
+                            <th class="cols">
+                                <span class="hide-text">Full render</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="label">
+                                <span class="hide-text">Headshot</span>
+                            </th>
+                            <th class="price active"><span class="hide-text">7</span></th>
+                            <th class="price"><span class="hide-text">15</span></th>
+                            <th class="price"><span class="hide-text">20</span></th>
+                        </tr>
+                        <tr>
+                            <th class="label">
+                                <span class="hide-text">Halfbody</span>
+                            </th>
+                            <th class="price"><span class="hide-text">10</span></th>
+                            <th class="price"><span class="hide-text">25</span></th>
+                            <th class="price"><span class="hide-text">45</span></th>
+                        </tr>
+                        <tr>
+                            <th class="label">
+                                <span class="hide-text">Fullbody</span>
+                            </th>
+                            <th class="price"><span class="hide-text">15</span></th>
+                            <th class="price"><span class="hide-text">35</span></th>
+                            <th class="price"><span class="hide-text">65</span></th>
+                        </tr>
+                    </table>
+                </div>
                 <p class="under-table">Click your desired option</p>
                 <!-- <fieldset>
                     <legend>Render</legend>
@@ -85,45 +125,88 @@
                     <input type="radio" id="full-render" name="render" />
                     <label for="full-render">Full render</label>
                 </fieldset> -->
-                <fieldset class="bg">
-                    <legend>Background</legend>
-                
-                    <div class="bg-option">
-                        <input type="radio" id="simple-bg" name="bg" value="0" checked/>
-                        <label for="simple-bg">
-                            Simple background ($0)<br>
-                            <p>One colored, gradients, patterns, etc</p>
-                        </label>
-                    </div>
-                
-                    <div class="bg-option">
-                        <div class="complex" style="opacity: 25%;">
-                            <input type="radio" id="complex-bg" name="bg" value="25"/>
-                            <label for="complex-bg">
-                                Complex background (+25% $)<br>
-                                <p>
-                                    Will match choosen option (basic coloring or full render)<br>
-                                    Scenery, interiors, etc.<br>
-                                    Not available for sketch options</p>
+                <div class="fieldset-class">
+                    <fieldset class="bg">
+                        <legend>Background</legend>
+                    
+                        <div class="bg-option">
+                            <input type="radio" id="simple-bg" name="bg" value="0" checked/>
+                            <label for="simple-bg">
+                                Simple background ($0)<br>
+                                <p>One colored, gradients, patterns, etc</p>
                             </label>
                         </div>
-                    </div>
-                </fieldset>
-                <fieldset class="additional">
-                    <legend>Additional characters (+50% $ each)</legend>
-                
-                    <!-- <input type="number" id="additional-chars" name="bg" value="1"/> -->
-                    <div class="additional-options">
-                        <div class="additional-option active">0</div>
-                        <div class="additional-option">1</div>
-                        <div class="additional-option">2</div>
-                        <div class="additional-option">3</div>
-                    </div>
-                    <p><!-- +75% $ for every additional character<br> -->
-                        Maximum of 3 additional characters<br>
-                        Note that this option means you will get single piece with additional characters<br>
-                        If you want two pieces with different characters - you have to make separate orders</p>
-                </fieldset>
+                    
+                        <div class="bg-option">
+                            <div class="complex" style="opacity: 25%;">
+                                <input type="radio" id="complex-bg" name="bg" value="25"/>
+                                <label for="complex-bg">
+                                    Complex background (+25% $)<br>
+                                    <p>
+                                        Will match choosen option (basic coloring or full render)<br>
+                                        Scenery, interiors, etc.<br>
+                                        Not available for sketch options</p>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="bg blurred">
+                        <legend>Background</legend>
+                    
+                        <div class="bg-option">
+                            <input type="radio" id="simple-bg" name="bg" value="0" checked/>
+                            <label for="simple-bg">
+                                Simple background ($0)<br>
+                                <p>One colored, gradients, patterns, etc</p>
+                            </label>
+                        </div>
+                    
+                        <div class="bg-option">
+                            <div class="complex" style="opacity: 25%;">
+                                <input type="radio" id="complex-bg" name="bg" value="25"/>
+                                <label for="complex-bg">
+                                    Complex background (+25% $)<br>
+                                    <p>
+                                        Will match choosen option (basic coloring or full render)<br>
+                                        Scenery, interiors, etc.<br>
+                                        Not available for sketch options</p>
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="fieldset-class">
+                    <fieldset class="additional">
+                        <legend>Additional characters (+50% $ each)</legend>
+                    
+                        <!-- <input type="number" id="additional-chars" name="bg" value="1"/> -->
+                        <div class="additional-options">
+                            <div class="additional-option active">0</div>
+                            <div class="additional-option">1</div>
+                            <div class="additional-option">2</div>
+                            <div class="additional-option">3</div>
+                        </div>
+                        <p><!-- +75% $ for every additional character<br> -->
+                            Maximum of 3 additional characters<br>
+                            Note that this option means you will get single piece with additional characters<br>
+                            If you want two pieces with different characters - you have to make separate orders</p>
+                    </fieldset>
+                    <fieldset class="additional blurred">
+                        <legend>Additional characters (+50% $ each)</legend>
+                    
+                        <!-- <input type="number" id="additional-chars" name="bg" value="1"/> -->
+                        <div class="additional-options">
+                            <div class="additional-option active">0</div>
+                            <div class="additional-option">1</div>
+                            <div class="additional-option">2</div>
+                            <div class="additional-option">3</div>
+                        </div>
+                        <p><!-- +75% $ for every additional character<br> -->
+                            Maximum of 3 additional characters<br>
+                            Note that this option means you will get single piece with additional characters<br>
+                            If you want two pieces with different characters - you have to make separate orders</p>
+                    </fieldset>
+                </div>
                 <div class="estimated">
                     <h2 class="right">Estimated price</h2>
                     <p class="choosen-options">Headshot & sketch ($5)</p>
