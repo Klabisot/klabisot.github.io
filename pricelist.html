@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css?fuckCache=true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet" />
 
     <title>Commissions Price List</title>
     <!-- <link rel="icon" href="https://cdn.7tv.app/emote/6425ea32e56d784af090f3ed/2x.webp"> -->
     <meta content="Klabisot's Commissions Price List" property="og:title" />
-    <meta content="https://x.com/klabisot" property="og:url" />
+    <meta content="https://klabisot.art/pricelist" property="og:url" />
     <meta content="https://lh3.googleusercontent.com/d/1TJi2MSSlX9yusps0CBWic5JzCc7qstFH" property="og:image" />
 </head>
-<body>
 
+<body>
     <!-- TODO: different versions of one piece -->
 
     <div id="bg">
@@ -26,9 +29,9 @@
     </div>
 
     <div class="container">
+        <h2 class="center header">Dreamy Lounge's Commission Sheet</h2>
         <div class="main-content">
             <div class="library">
-                <h2>Options</h2>
                 <!-- <p>Сверху можно воспользоваться поиском, стрелками ↑ ↓ можно листать библиотеку</p> -->
                 <!-- <fieldset>
                     <legend>Shot</legend>
@@ -42,321 +45,477 @@
                     <input type="radio" id="fullbody" name="shot" />
                     <label for="fullbody">Fullbody</label>
                 </fieldset> -->
-                <div class="table">
-                    <table class="not-blurred">
-                        <tr>
-                            <th style="border: none;">
-                            </th>
-                            <th class="cols border-here">
-                                Sketch
-                            </th>
-                            <th class="cols">
-                                Light render
-                            </th>
-                            <th class="cols">
-                                Full render
-                            </th>
-                        </tr>
-                        <tr>
-                            <th class="label">
-                                Headshot
-                            </th>
-                            <th class="price active">7</th>
-                            <th class="price">15</th>
-                            <th class="price">20</th>
-                        </tr>
-                        <tr>
-                            <th class="label">
-                                Halfbody
-                            </th>
-                            <th class="price">10</th>
-                            <th class="price">25</th>
-                            <th class="price">45</th>
-                        </tr>
-                        <tr>
-                            <th class="label">
-                                Fullbody
-                            </th>
-                            <th class="price">15</th>
-                            <th class="price">35</th>
-                            <th class="price">65</th>
-                        </tr>
-                    </table>
-                    <table class="blurred">
-                        <tr>
-                            <th style="border: none;">
-                            </th>
-                            <th class="cols border-here">
-                                <span class="hide-text">Sketch</span>
-                            </th>
-                            <th class="cols">
-                                <span class="hide-text">Light render</span>
-                            </th>
-                            <th class="cols">
-                                <span class="hide-text">Full render</span>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th class="label">
-                                <span class="hide-text">Headshot</span>
-                            </th>
-                            <th class="price active"><span class="hide-text">7</span></th>
-                            <th class="price"><span class="hide-text">15</span></th>
-                            <th class="price"><span class="hide-text">20</span></th>
-                        </tr>
-                        <tr>
-                            <th class="label">
-                                <span class="hide-text">Halfbody</span>
-                            </th>
-                            <th class="price"><span class="hide-text">10</span></th>
-                            <th class="price"><span class="hide-text">25</span></th>
-                            <th class="price"><span class="hide-text">45</span></th>
-                        </tr>
-                        <tr>
-                            <th class="label">
-                                <span class="hide-text">Fullbody</span>
-                            </th>
-                            <th class="price"><span class="hide-text">15</span></th>
-                            <th class="price"><span class="hide-text">35</span></th>
-                            <th class="price"><span class="hide-text">65</span></th>
-                        </tr>
-                    </table>
-                </div>
-                <p class="under-table">Click your desired option</p>
-                <!-- <fieldset>
-                    <legend>Render</legend>
-                
-                    <input type="radio" id="sketch" name="render" />
-                    <label for="sketch">Sketch</label><br />
-                
-                    <input type="radio" id="line-basic" name="render" />
-                    <label for="line-basic">Line + basic coloring</label><br />
-                
-                    <input type="radio" id="full-render" name="render" />
-                    <label for="full-render">Full render</label>
-                </fieldset> -->
-                <div class="fieldset-class">
-                    <fieldset class="bg not-blurred">
-                        <legend>Background</legend>
-                    
-                        <div class="bg-option">
-                            <input type="radio" id="simple-bg" name="bg" value="0" checked/>
-                            <label for="simple-bg">
-                                Simple background ($0)<br>
-                                <p>One colored, gradients, patterns, etc.</p>
-                            </label>
-                        </div>
-                    
-                        <div class="bg-option">
-                            <div class="complex" style="opacity: 25%;">
-                                <input type="radio" id="complex-bg" name="bg" value="25"/>
-                                <label for="complex-bg">
-                                    Complex background (+25% $)<br>
-                                    <p>
-                                        Scenery, interiors, etc.<br>
-                                </label>
+
+                <div class="nasral">
+                    <div class="preview">
+                        <img src="img/dorema.png" />
+                        <div class="preview-section fullbody"></div>
+                    </div>
+                    <div class="option-selector-container" style="margin-bottom: 1px">
+                        <h2 class="center">Options</h2>
+                        <div class="option-selector">
+                            <div class="table">
+                                <table class="not-blurred">
+                                    <tr>
+                                        <th style="border: none"></th>
+                                        <th class="cols border-here">
+                                            Sketch
+                                        </th>
+                                        <th class="cols">Light render</th>
+                                        <th class="cols">Full render</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="label">Headshot</th>
+                                        <th class="price">7</th>
+                                        <th class="price">20</th>
+                                        <th class="price">35</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="label">Bust</th>
+                                        <th class="price">10</th>
+                                        <th class="price">30</th>
+                                        <th class="price">50</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="label">Half Body</th>
+                                        <th class="price">15</th>
+                                        <th class="price">40</th>
+                                        <th class="price">70</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="label">Knee Up</th>
+                                        <th class="price">20</th>
+                                        <th class="price">55</th>
+                                        <th class="price">85</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="label">Full Body</th>
+                                        <th class="price">25</th>
+                                        <th class="price">70</th>
+                                        <th class="price active">100</th>
+                                    </tr>
+                                </table>
+                                <table class="blurred">
+                                    <tr>
+                                        <th style="border: none"></th>
+                                        <th class="cols border-here">
+                                            <span class="hide-text">Sketch</span>
+                                        </th>
+                                        <th class="cols">
+                                            <span class="hide-text">Light render</span>
+                                        </th>
+                                        <th class="cols">
+                                            <span class="hide-text">Full render</span>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th class="label">
+                                            <span class="hide-text">Headshot</span>
+                                        </th>
+                                        <th class="price">
+                                            <span class="hide-text">7</span>
+                                        </th>
+                                        <th class="price">
+                                            <span class="hide-text">20</span>
+                                        </th>
+                                        <th class="price">
+                                            <span class="hide-text active">35</span>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th class="label">
+                                            <span class="hide-text">Bust</span>
+                                        </th>
+                                        <th class="price">
+                                            <span class="hide-text">10</span>
+                                        </th>
+                                        <th class="price">
+                                            <span class="hide-text">25</span>
+                                        </th>
+                                        <th class="price">
+                                            <span class="hide-text">40</span>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th class="label">
+                                            <span class="hide-text">Half Body</span>
+                                        </th>
+                                        <th class="price">
+                                            <span class="hide-text">15</span>
+                                        </th>
+                                        <th class="price">
+                                            <span class="hide-text">40</span>
+                                        </th>
+                                        <th class="price">
+                                            <span class="hide-text">60</span>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th class="label">
+                                            <span class="hide-text">Knee Up</span>
+                                        </th>
+                                        <th class="price">
+                                            <span class="hide-text">20</span>
+                                        </th>
+                                        <th class="price">
+                                            <span class="hide-text">55</span>
+                                        </th>
+                                        <th class="price">
+                                            <span class="hide-text">85</span>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th class="label">
+                                            <span class="hide-text">Full Body</span>
+                                        </th>
+                                        <th class="price">
+                                            <span class="hide-text">25</span>
+                                        </th>
+                                        <th class="price">
+                                            <span class="hide-text">70</span>
+                                        </th>
+                                        <th class="price">
+                                            <span class="hide-text">100</span>
+                                        </th>
+                                    </tr>
+                                </table>
                             </div>
-                        </div>
-                    </fieldset>
-                    <fieldset class="bg blurred">
-                        <legend>Background</legend>
-                    
-                        <div class="bg-option">
-                            <input type="radio" id="simple-bg" name="bg" value="0" checked/>
-                            <label for="simple-bg">
-                                Simple background ($0)<br>
-                                <p>One colored, gradients, patterns, etc.</p>
-                            </label>
-                        </div>
-                    
-                        <div class="bg-option">
-                            <div class="complex" style="opacity: 25%;">
-                                <input type="radio" id="complex-bg" name="bg" value="25"/>
-                                <label for="complex-bg">
-                                    Complex background (+25% $)<br>
-                                    <p>
-                                        Scenery, interiors, etc.<br>
-                                </label>
+                            <p class="under-table">
+                                Click your desired option
+                            </p>
+
+                            <div class="fieldset-class">
+                                <fieldset class="bg not-blurred">
+                                    <legend>Background</legend>
+
+                                    <div class="bg-option">
+                                        <input type="radio" id="no-bg" name="bg" value="0" checked />
+                                        <label for="no-bg">
+                                            No background<br />
+                                            <p>
+                                                White, colored or
+                                                transparent background
+                                            </p>
+                                        </label>
+                                    </div>
+
+                                    <div class="bg-option">
+                                        <div class="complex" style="opacity: 25%">
+                                            <input type="radio" id="simple-bg" name="bg" value="20" />
+                                            <label for="simple-bg">
+                                                Simple background (+20%
+                                                $)<br />
+                                                <p>
+                                                    Patterns, something
+                                                    abstract etc.
+                                                </p>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-option">
+                                        <div class="complex" style="opacity: 25%">
+                                            <input type="radio" id="complex-bg" name="bg" value="75" />
+                                            <label for="complex-bg">
+                                                Complex background (+75%
+                                                $)<br />
+                                                <p>
+                                                    Scenery, interiors,
+                                                    etc.<br /></p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="bg blurred">
+                                    <legend>Background</legend>
+
+                                    <div class="bg-option">
+                                        <input type="radio" id="no-bg" name="bg" value="0" checked />
+                                        <label for="no-bg">
+                                            No background<br />
+                                            <p>
+                                                White, colored or
+                                                transparent background
+                                            </p>
+                                        </label>
+                                    </div>
+
+                                    <div class="bg-option">
+                                        <div class="complex" style="opacity: 25%">
+                                            <input type="radio" id="simple-bg" name="bg" value="20" />
+                                            <label for="simple-bg">
+                                                Simple background (+20%
+                                                $)<br />
+                                                <p>
+                                                    Patterns, something
+                                                    abstract etc.
+                                                </p>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-option">
+                                        <div class="complex" style="opacity: 25%">
+                                            <input type="radio" id="complex-bg" name="bg" value="75" />
+                                            <label for="complex-bg">
+                                                Complex background (+75%
+                                                $)<br />
+                                                <p>
+                                                    Scenery, interiors,
+                                                    etc.<br /></p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
                             </div>
+                            <div class="fieldset-class">
+                                <fieldset class="additional">
+                                    <legend>Additional characters</legend>
+
+                                    <input hidden type="number" id="additional-chars" name="bg" value="1" />
+                                    <div class="additional-options">
+                                        <div class="additional-option active">
+                                            0
+                                        </div>
+                                        <div class="additional-option">
+                                            1
+                                        </div>
+                                        <div class="additional-option">
+                                            2
+                                        </div>
+                                        <div class="additional-option">
+                                            3
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Each additional character is +50%
+                                        $<br />
+                                        Maximum of 3 additional
+                                        characters<br />
+                                    </p>
+                                </fieldset>
+                                <fieldset class="additional blurred">
+                                    <legend>Additional characters</legend>
+
+                                    <input hidden type="number" id="additional-chars" name="bg" value="1" />
+                                    <div class="additional-options">
+                                        <div class="additional-option active">
+                                            0
+                                        </div>
+                                        <div class="additional-option">
+                                            1
+                                        </div>
+                                        <div class="additional-option">
+                                            2
+                                        </div>
+                                        <div class="additional-option">
+                                            3
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Each additional character is +50%
+                                        $<br />
+                                        Maximum of 3 additional
+                                        characters<br />
+                                    </p>
+                                </fieldset>
+                            </div>
+                            <!-- </div> -->
                         </div>
-                    </fieldset>
-                </div>
-                <div class="fieldset-class">
-                    <fieldset class="additional">
-                        <legend>Additional characters (+50% $ each)</legend>
-                    
-                        <!-- <input type="number" id="additional-chars" name="bg" value="1"/> -->
-                        <div class="additional-options">
-                            <div class="additional-option active">0</div>
-                            <div class="additional-option">1</div>
-                            <div class="additional-option">2</div>
-                            <div class="additional-option">3</div>
-                        </div>
-                        <p><!-- +75% $ for every additional character<br> -->
-                            Maximum of 3 additional characters<br>
+                    </div>
+                    <div class="estimated">
+                        <h2 class="right">Estimated price</h2>
+                        <p class="choosen-options">
+                            Headshot & sketch ($5)
                         </p>
-                    </fieldset>
-                    <fieldset class="additional blurred">
-                        <legend>Additional characters (+50% $ each)</legend>
-                    
-                        <!-- <input type="number" id="additional-chars" name="bg" value="1"/> -->
-                        <div class="additional-options">
-                            <div class="additional-option active">0</div>
-                            <div class="additional-option">1</div>
-                            <div class="additional-option">2</div>
-                            <div class="additional-option">3</div>
-                        </div>
-                        <p><!-- +75% $ for every additional character<br> -->
-                            Maximum of 3 additional characters<br>
-                        </p>
-                    </fieldset>
-                </div>
-                <div class="estimated">
-                    <h2 class="right">Estimated price</h2>
-                    <p class="choosen-options">Headshot & sketch ($5)</p>
-                    <h3 class="right estimated-price">~300$</h3>
-                </div>
-            </div>
-            <div class="will-and-wont-draw">
-                <div class="info-container">
-<!--                     <div class="info">
-                        <h2>Slots</h2>
-                        <p>1/1 slots available</p>
-                    </div> -->
-
-                    <div class="info">
-                        <h2>Will draw</h2>
-                        <ul>
-                            <li>Females</li>
-                            <li>Something cute or/and beautiful</li>
-                            <li>Light nudity</li>
-                        </ul>
+                        <h3 class="right estimated-price">~300$</h3>
                     </div>
-
-                    <div class="info">
-                        <h2>Will NOT draw</h2>
-                        <ul>
-                            <li>Males</li>
-                            <li>NSFW (sexualized connotation, sex scenes, fetishes, and so on)</li>
-                            <li>Furry</li>
-                            <li>Non-human characters</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="info-container">
-                    <div class="info">
-                        <h2>Deadlines</h2>
-                        <ul>
-                            <li>For sketches and base coloring deadline is somewhere around <u>2-3 weeks</u><br></li>
-                            <li>For full render deadline is <u>1+ month</u><br></li>
-                        </ul>
-                    </div>
-
-                    <div class="info">
-                        <h2>Extra info</h2>
-                        <ul>
-                            <li>Final price may change slightly after I receive the commission details, references, etc., and mostly depends on complexity of commission</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="info-container">
-                    <div class="info">
-                        <h2>Payment</h2>
-                        <ul>
-                            <li><a href="https://boosty.to/dreamy_lounge">Boosty (Russian alternative for Patreon) (clickable)</a></li>
-                            <li>Full prepayment for $15 or less</li>
-                            <li>50% prepayment for $16 or more</li>
-                        </ul>
-                    </div>
-                    
-<!--                     <div class="info">
-                        <h2>Agreement</h2>
-                        <p>Making an order you are agreeing with everything written on this page<br>Please mind it</p>
-                    </div> -->
                 </div>
             </div>
             <div class="posts">
-                <h2>Examples</h2>
-                <div class="img-container">
-                    <!-- <img src="https://placehold.co/700x1000"/>
-                    <img src="https://placehold.co/800x1000"/>
-                    <img src="https://placehold.co/700x1000"/>
-                    <img src="https://placehold.co/400x1000"/>
-                    <img src="https://placehold.co/700x1000"/>
-                    <img src="https://placehold.co/1000x1000"/> -->
-                    <!-- 
-                    sk - sketch
-                    lr - light render
-                    fr - full render
+                <div class="post-container">
+                    <div class="another-container">
+                        <h2 class="center">Main info</h2>
+                        <p style="text-align: center; font-size: 14px; margin-bottom: 10px;">Everything can be
+                            discussed, but in general:</p>
 
-                    hs - headshot
-                    hb - halfbody
-                    fb - fullbody
+                        <div class="col-2">
+                            <div class="info">
+                                <h3>Will draw</h3>
+                                <ul>
+                                    <li>Females</li>
+                                    <li>Something cute or/and beautiful</li>
+                                    <li>Artistic nudity</li>
+                                </ul>
+                            </div>
 
-                    sbg - simple background
-                    cbg - complex background
-                    -->
-                    <img class="example fr fb sbg" src="https://lh3.googleusercontent.com/d/12jaBTHqJHRVIZzltYgJKZf-d-LaRDV1X"/>
-                    <img class="example fr hb sbg" src="https://lh3.googleusercontent.com/d/18h8Ma4LTSF_WK5exXrM0vmYVm1uAghBG"/>
-                    <img class="example fr hb sbg" src="https://lh3.googleusercontent.com/d/1DESb4dhqIdacUxNh0cJoFbyaY5YvXYZC"/>
-                    <img class="example lr hb sbg" src="https://lh3.googleusercontent.com/d/1FZSTNb5Z3Tm6LVm1fV6ddEOlymVvKKxL"/>
-                    <img class="example fr hb sbg" src="https://lh3.googleusercontent.com/d/1GytULpU9LnHBDRiyUxc5mc73JMGexywu"/>
-                    <img class="example fr fb sbg" src="https://lh3.googleusercontent.com/d/1IaffHsU7QyNiWy30VjpNYEK3rlKmPLhn"/>
-                    <img class="example fr hb sbg" src="https://lh3.googleusercontent.com/d/1WgJdtfElG55LDpEpBW7lc_ah3uCTli4L"/>
-                    <img class="example fr fb cbg" src="https://lh3.googleusercontent.com/d/1WmTYjf2RO1par0E2D4Z9CHtl5HjuOMli"/>
-                    <img class="example lr hb sbg" src="https://lh3.googleusercontent.com/d/1Xo50ViU_ZhP9eWoaSGYxW4kAfBQXfK0d"/>
-                    <img class="example fr fb sbg" src="https://lh3.googleusercontent.com/d/1Ysy8uNf48MUwoFPEdOyFNIGNc1cEvl5w"/>
-                    <img class="example lr hb sbg" src="https://lh3.googleusercontent.com/d/1mK5cMVkQZpswacOlBdjr_lKFoZbPjpa5"/>
-                    <img class="example fr fb sbg" src="https://lh3.googleusercontent.com/d/1n8sgM8-7HdvJ9r5AkoHxcb5YrEOkrdt2"/>
-                    <img class="example fr fb sbg" src="https://lh3.googleusercontent.com/d/1qQlUIxcqch5Sf5yQyqTnXyPBz7x9vAfG"/>
-                    <img class="example fr hb sbg" src="https://lh3.googleusercontent.com/d/1vsV1lhc3eg8-yn7Lt8boE6CpJdUgdU74"/>
-                    <img class="example fr hb cbg" src="https://lh3.googleusercontent.com/d/1zwl-eFxAl3bn4g_XgcYU2GP1nmCVUPMQ"/>
+                            <div class="info">
+                                <h3>Won't draw</h3>
+                                <ul>
+                                    <li>
+                                        NSFW (sexualized connotation, sex
+                                        scenes, fetishes, and so on)
+                                    </li>
+                                    <li>Males</li>
+                                    <li>Furry</li>
+                                    <li>Non-humanoid characters</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info-container">
+                            <div class="info">
+                                <h3>Slots (3/3)</h3>
+                                <ul>
+                                    <li>Free slot</li>
+                                    <li>Free slot</li>
+                                    <li>Free slot</li>
+                                </ul>
+                                <p style="font-size: 14px; margin-bottom: 10px;">Will be updated as I progress</p>
+                                <br />
+                            </div>
+                            <div class="info">
+                                <h3>Deadlines</h3>
+                                <ul>
+                                    <li>
+                                        Deadline is <u>1-2 weeks</u> for sketches/light render, up to
+                                        <u>1 month</u> for full render. Depends on
+                                        complexity and IRL stuff<br />
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="info">
+                                <h3>You will get</h3>
+                                <ul>
+                                    <li>
+                                        Drawing of your character depending
+                                        on the selected option
+                                    </li>
+                                    <li>
+                                        Image with a smallest dimension of
+                                        2500px (you can request a different
+                                        size)
+                                    </li>
+                                    <li>
+                                        Final file in any format (PNG, JPG,
+                                        PSD, etc.)
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="info">
+                                <h3>Contacts</h3>
+                                <ul>
+                                    <li>
+                                        <a href="https://x.com/klabisot">Twitter: @klabisot</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://discord.com/users/238388347884535818">Discord: @klabisot</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
-                    <img class="example fr fb cbg" src="https://lh3.googleusercontent.com/d/15Xosnrk8ScUQ21TUfi05AsLiXTKTL5RR"/>
-                    <img class="example fr hb cbg" src="https://lh3.googleusercontent.com/d/1AuF04wH8Ft-NECH7Fxv0FdzPi56pkw2m"/>
-                    <img class="example fr fb cbg" src="https://lh3.googleusercontent.com/d/1BW4-3hbbeFZub9YGBnS20lawqdqhDeXN"/>
-                    <img class="example fr fb cbg" src="https://lh3.googleusercontent.com/d/1FzXiECMAd4_1CTMMWGxNGvZo4pdRH0h-"/>
-                    <img class="example fr hb sbg" src="https://lh3.googleusercontent.com/d/1NRHRASDvYR_9CAKVPC7cZxGwwD-4e3vV"/>
-                    <img class="example lr hb sbg" src="https://lh3.googleusercontent.com/d/1RFU2t4qrwf3ocxhFbcLTz1BJqjyyHITp"/>
-                    <img class="example lr fb sbg" src="https://lh3.googleusercontent.com/d/1xFGGU-hhOvEymJYVBRgko95WJJvRF_uG"/>
-                    <img class="example lr hb cbg" src="https://lh3.googleusercontent.com/d/1V9P0u4-wy7lF3pgI51O2zuciAFf47aIl"/>
-                    <img class="example lr fb cbg" src="https://lh3.googleusercontent.com/d/1V9P0u4-wy7lF3pgI51O2zuciAFf47aIl"/>
-                    <img class="example fr hb cbg" src="https://lh3.googleusercontent.com/d/1WoauB4-_7HrXQuw344YwnH7aJg9trsXH"/>
-                    <img class="example fr fb sbg" src="https://lh3.googleusercontent.com/d/1uWw5Z0xY1S8jyvBewYDmbWgJ7sDL50a6"/>
-
-                    <img class="example lr hb sbg" src="https://lh3.googleusercontent.com/d/14Cl-6IHLLym4yPfWvI59OIUyPpIoRHnG"/>
-                    <img class="example lr fb sbg" src="https://lh3.googleusercontent.com/d/12xWv4jnrPCovTSPbi3PcfypUIOqsNcpp"/>
-
-                    <img class="example fr hs sbg" src="https://lh3.googleusercontent.com/d/1TJi2MSSlX9yusps0CBWic5JzCc7qstFH"/>
-                    <img class="example lr hs cbg" src="https://lh3.googleusercontent.com/d/1t8W1qTAqKc3ARbtNjxTgDByw8cpzHu9k"/>
-                    <img class="example fr hs cbg" src="https://lh3.googleusercontent.com/d/1uj9yjr0n7oM7D0NhZOKG1hBm3119W9Yx"/>
-                    <img class="example lr hs sbg" src="https://lh3.googleusercontent.com/d/15x6azOSM1FeFK3Qfda_Ha4cC3nwzTjTV"/>
-
-                    <img class="example sk hb sbg" src="https://lh3.googleusercontent.com/d/1kOKFShbCZ4OWYsydF9k4wFsPyjYDhlem"/>
-                    <img class="example sk hb sbg" src="https://lh3.googleusercontent.com/d/1-DMZxoqUx0_G-_GEgNym8AWfT1Pv1d2x"/>
-                    <img class="example sk fb sbg" src="https://lh3.googleusercontent.com/d/18jUVXBsEWuqt-_wOg0Z3CkswQ5KUbU7A"/>
-                    <img class="example sk hs sbg" src="https://lh3.googleusercontent.com/d/1EK8lyPdkKSMFaAVV7nD7sV-YRgb4rYJ9"/>
-                    <img class="example sk fb sbg" src="https://lh3.googleusercontent.com/d/1E_BeS_sM0yio_uB26uOqkA7qchsVOOvU"/>
-                    <img class="example sk hb sbg" src="https://lh3.googleusercontent.com/d/1MsqgAcSwfvjt8kZ_z9c__38xECYaLNt3"/>
-                    <img class="example sk hb sbg" src="https://lh3.googleusercontent.com/d/1vHX2md-EttUeYWhjSoXaUrQ05rFI5g5h"/>
-                    <img class="example sk fb sbg" src="https://lh3.googleusercontent.com/d/1yrX5H1Guykpgs8DIwEvrJ4rmcO3Iw6-P"/>
+                        <h2 class="center overline">Terms of Service</h2>
+                        <h3>General</h3>
+                        <ul>
+                            <li>
+                                I reserve the right to post commissioned
+                                artwork in my socials unless otherwise
+                                agreed. If not, I&#39;ll add a watermark
+                                indicating artwork as commissioned
+                            </li>
+                            <li>
+                                References are necessary for complex
+                                commissions and are appreciated for other
+                                situations. References can be anything that
+                                describes your idea literally or just gives
+                                desired vibes: characters, outfits, scenery,
+                                screenshots from movies and games, and so on
+                            </li>
+                            <li>
+                                Commissioned artwork is ONLY for personal
+                                non-profit usage. If you need it for
+                                commercial purposes (merchandise, prints,
+                                ads, etc.), we can discuss it, and it will
+                                be more expensive too
+                            </li>
+                            <li>
+                                I can refuse to work on commission without
+                                explanation
+                            </li>
+                            <li>
+                                But everything is still a subject of
+                                discussion, and we might agree on a middle
+                                ground
+                            </li>
+                            <li>
+                                Everything here could change at any moment
+                                without notice. However, I will still try to
+                                notify you about any upcoming changes. Also,
+                                despite any changes, if we have agreed on
+                                something already, it will remain fixed
+                            </li>
+                        </ul>
+                        <h3 id="payments">Payment</h3>
+                        <ul>
+                            <li>Payment through <a href="https://app.lava.top/dreamy_lounge">lava.top</a></li>
+                            <li>
+                                Full prepayment is required before I start
+                                working on the sketch
+                            </li>
+                            <li>
+                                Maximum of 3 additional characters. Each
+                                character is +50% to base price
+                            </li>
+                            <!-- <li>
+                                Commercial purpose commissions are +50%-100%
+                                to final price. Depending on the project,
+                                specified rates may increase
+                            </li> -->
+                        </ul>
+                        <h3 id="payments">Refunds</h3>
+                        <ul>
+                            <li>
+                                Refunds are possible before I start working on the sketch
+                            </li>
+                            <li>Once the sketch has been created, only a partial refund is available</li>
+                            <li>The refundable amount will be calculated based on the part of the commission already
+                                completed<br>
+                                <p style="margin-top: 5px;">For example, if you paid $100 for a illustration and I have
+                                    completed a knee-up sketch valued at
+                                    $20, the refund will be $80.</p>
+                            </li>
+                            <li>After the rendering stage has begun, refunds are no longer possible</li>
+                            <li>Be ready if lava.top will eat 8% of payment on refund, I can do nothing about it...</li>
+                        </ul>
+                        <h3 id="payments">Commission steps</h3>
+                        <ol>
+                            <li>Discussion of your idea and references</li>
+                            <li>Invoice & payment</li>
+                            <li>Sketch creation</li>
+                            <li>Sketch approval</li>
+                            <li>Color stage</li>
+                            <li>Color approval</li>
+                            <li>Final rendering</li>
+                            <li>Final approval</li>
+                            <li>Delivery</li>
+                        </ol>
+                        <h3 id="payments">Revisions</h3>
+                        <ul>
+                            <li>
+                                There is possibility to request up to 3
+                                edits during sketch and color stage and 1
+                                edit after final rendering
+                            </li>
+                            <!-- <li>Only minor edits are allowed</li> -->
+                        </ul>
+                    </div>
                 </div>
-                <p class="no-examples">no examples :(</p>
             </div>
         </div>
-        <!-- <div class="author">
-            <img src="https://cdn.7tv.app/emote/63daf2cf60cfb462b9e1b028/1x.webp"/> страницу создал klabisot<br>
-            спамьте пастами в тему, пожалуйста<br>
-            <a href="https://ttvfreaks.github.io/mf_kitchen">Кухня паст Маятника Фуко</a><br>
-            <a href="https://www.radiorecord.ru/station/mf">Радио Маятник Фуко</a><br>
-            <a href="https://pikuco.ru/tests/94602/">Тест от megazhizha</a><br>
-            <a href="https://pikuco.ru/tests/95161/">Тест от kuriyani</a>
-        </div> -->
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts.js"></script>
-    <script src="animated_bg.js"></script>
+    <script src="js/scripts.js?fuckCache=true"></script>
+    <script src="js/animated_bg 2.js"></script>
 </body>
+
 </html>
