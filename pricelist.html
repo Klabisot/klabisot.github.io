@@ -366,11 +366,11 @@
                         </div>
                         <div class="info-container">
                             <div class="info">
-                                <h3>Slots (2/3)</h3>
-                                <ul>
-                                    <li>[2/9] Sketch creation</li>
+                                <h3>Slots (<texto id="slots_available">3</texto>/<texto id="max_slots">3</texto>)</h3>
+                                <ul id="slots">
+                                    <!-- <li>[2/9] Sketch creation</li>
                                     <li>Free slot</li>
-                                    <li>Free slot</li>
+                                    <li>Free slot</li> -->
                                 </ul>
                                 <p style="font-size: 14px; margin-bottom: 10px;">Will be updated as I progress</p>
                                 <br />
@@ -538,6 +538,78 @@
             </div>
         </div>
     </div>
+
+    <script>
+
+        async function loadSheet(sheetID, gid=0) {
+            const csvUrl = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:csv&gid=${gid}`;
+
+            try {
+                const response = await fetch(csvUrl);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch the data. Ensure the sheet is published and shared as "Anyone with the link can view".');
+                }
+                const csvText = await response.text();
+                return csvText;
+            } catch (error) {
+                alert(error.message);
+            }
+        }
+
+        // loadSheet("161wVpZazv9KSGAKEDiND0k0i4X6ewFexgrmA3AatsfE")
+
+        async function fillData() {
+            const csv = await loadSheet("161wVpZazv9KSGAKEDiND0k0i4X6ewFexgrmA3AatsfE")
+
+            const regex = /,(?=(?:[^"]*"[^"]*")*(?![^"]*"))/;
+
+            const rows = csv.split('\n');
+
+            rows.forEach((row, index) => {
+                const columns = row.split(regex);
+                const key = columns[0].replaceAll('"', '').trim()
+                const value = columns[1].replaceAll('"', '').trim()
+                console.log(key, value);
+
+                $(`#${key}`).text(value);
+                console.log(columns);
+            })
+        }
+        async function fillSlotInfo() {
+            const csv = await loadSheet("161wVpZazv9KSGAKEDiND0k0i4X6ewFexgrmA3AatsfE", 649449172)
+
+            const regex = /,(?=(?:[^"]*"[^"]*")*(?![^"]*"))/;
+
+            const rows = csv.split('\n');
+
+            let slots = ""
+            rows.forEach((row, index) => {
+                slots += `<li>${row.replaceAll('"', '').trim()}</li>`
+            })
+            $('#slots').html(slots);
+        }
+
+        fillData();
+        fillSlotInfo();
+
+        // $(document).on('wheel', function(event) {
+        //     var $scrollableDiv = $('#table-container');
+
+        //     // Отменяем стандартное поведение прокрутки
+        //     event.preventDefault();
+
+        //     // Прокручиваем div в зависимости от направления прокрутки
+        //     $scrollableDiv.scrollTop($scrollableDiv.scrollTop() + event.originalEvent.deltaY);
+        // });
+        // $('.header span').on('click', function(event) {
+        //     target_offset = $(`#row-${gameRow}`).offset(),
+        //     target_top = target_offset.top;
+        //     $('#table-container').animate({
+        //         scrollTop: target_top - $('#table-container').height()/2
+        //     }, 800);
+        // });
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/scripts.js?fuckCache=true"></script>
     <script src="js/animated_bg 2.js"></script>

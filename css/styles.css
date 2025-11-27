@@ -16,7 +16,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+texto {
     font-family: "Platypi", sans-serif;
     font-optical-sizing: auto;
     font-style: italic;
@@ -42,7 +43,8 @@ h2 {
     margin-top: 5px;
 }
 h2,
-h3 {
+h3,
+texto {
     margin-bottom: 5px;
     color: rgb(221, 217, 253);
     text-shadow: #ddd9fd 0px 0 3px;
