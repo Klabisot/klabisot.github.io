@@ -90,6 +90,32 @@ li {
     margin-bottom: 5px;
 }
 
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.loading-text {
+    text-align: center;
+    color: #ddd9fd;
+}
+.loading-text h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.loading-text p {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
 body {
     height: 100vh;
     margin: 0;
@@ -335,12 +361,12 @@ tr:last-child th:last-child {
     font-weight: bold;
 }
 
-.additional-options {
+.additional-options, .additional-versions {
     display: flex;
     flex: 1;
     cursor: default;
 }
-.additional-option {
+.additional-option, .additional-version {
     width: 100%;
     text-align: center;
     padding: 5px;
@@ -353,10 +379,10 @@ tr:last-child th:last-child {
     box-shadow: #ddd9fd 0px 0 4px;
     text-shadow: #ddd9fd 0px 0 2px;
 }
-.additional-option:hover {
+.additional-option:hover, .additional-version:hover {
     background: #47455f;
 }
-.additional-option.active {
+.additional-option.active, .additional-version.active {
     background: #ddd9fd;
     color: #262b3f;
     font-weight: bold;
@@ -401,6 +427,11 @@ tr:last-child th:last-child {
 .wills-wonts p {
     margin-bottom: 20px;
     font-size: 13px;
+}
+.comms a{
+    display: block;
+    margin-left: 5px;
+    margin-top: 2px;
 }
 
 .posts {
@@ -821,3 +852,11 @@ ul, ol {
 *{
     overflow-x: hidden;
 } */
+
+
+.hidden{
+    /* display: none; */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}

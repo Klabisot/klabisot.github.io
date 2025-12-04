@@ -30,7 +30,14 @@
         <div id="bg-blend"></div>
     </div>
 
-    <div class="container">
+    <div class="loading-screen">
+        <div class="loading-text">
+            <h1>Loading...</h1>
+            <p>It may take a while, please wait</p>
+        </div>
+    </div>
+
+    <div class="container hidden">
         <h2 class="center header">Dreamy Lounge's Commission Sheet</h2>
         <div class="main-content">
             <div class="library">
@@ -322,6 +329,76 @@
                                     </p>
                                 </fieldset>
                             </div>
+                            <div class="fieldset-class">
+                                <fieldset class="additional">
+                                    <legend>Alternative versions</legend>
+
+                                    <input hidden type="number" id="additional-vers" name="bg" value="1" />
+                                    <div class="additional-versions">
+                                        <div class="additional-version active">
+                                            0
+                                        </div>
+                                        <div class="additional-version">
+                                            1
+                                        </div>
+                                        <div class="additional-version">
+                                            2
+                                        </div>
+                                        <div class="additional-version">
+                                            3
+                                        </div>
+                                        <div class="additional-version">
+                                            4
+                                        </div>
+                                        <div class="additional-version">
+                                            5
+                                        </div>
+                                        <div class="additional-version">
+                                            6
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Each alternative version is +15%
+                                        $<br />
+                                        Maximum of 6 alternative
+                                        versions<br />
+                                    </p>
+                                </fieldset>
+                                <fieldset class="additional blurred">
+                                    <legend>Alternative versions</legend>
+
+                                    <input hidden type="number" id="additional-vers" name="bg" value="1" />
+                                    <div class="additional-versions">
+                                        <div class="additional-version active">
+                                            0
+                                        </div>
+                                        <div class="additional-version">
+                                            1
+                                        </div>
+                                        <div class="additional-version">
+                                            2
+                                        </div>
+                                        <div class="additional-version">
+                                            3
+                                        </div>
+                                        <div class="additional-version">
+                                            4
+                                        </div>
+                                        <div class="additional-version">
+                                            5
+                                        </div>
+                                        <div class="additional-version">
+                                            6
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Each alternative version is +15%
+                                        $<br />
+                                        Maximum of 6 alternative
+                                        versions<br />
+                                    </p>
+                                </fieldset>
+                            </div>
                             <!-- </div> -->
                         </div>
                     </div>
@@ -414,6 +491,9 @@
                                     otherwise it will be freed
                                 </li>
                                 <li>
+                                    Full prepayment for sketch positions
+                                </li>
+                                <li>
                                     Maximum of 3 additional characters. Each
                                     character is +50% to base price
                                 </li>
@@ -433,6 +513,11 @@
                                         <a href="https://discord.com/users/238388347884535818">Discord: @klabisot</a>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="info">
+                                <h3 style="margin-top: 15px;">Completed commissions</h3>
+                                <ul id="comms">
+                                </ul>
                             </div>
 
                         </div>
@@ -494,6 +579,35 @@
                             <li>[Optional] Examples of artworks or vibes you want to convey</li>
                             <li>[Optional] Preferred image size or resolution</li>
                         </ul> -->
+                        <h3 id="payments">Alternative versions</h3>
+                        <ul>
+                            <li>
+                                Alternative versions refer to variations of the same artwork, such
+                                as alternative outfit/undressing, hairstyle changes, slight pose adjustments
+                                (e.g. small hand/head/eye rotation), minimal background tweaks and so on
+                            </li>
+                            <li>
+                                Not considered as alternative versions: a significantly different pose, a
+                                new composition, a new full-body orientation, or any change that requires
+                                redrawing major parts of the artwork. These will be treated as a separate
+                                commission
+                            </li>
+                            <li>
+                                Revisions vs. alternative versions: Standard revisions only cover minor
+                                fixes. Requests that result in an alternative version (as defined above)
+                                after final approval will require an extra fee.
+                            </li>
+                            <li>
+                                Pricing: Each alternative version is charged at +15% of the base price
+                            </li>
+                            <li>
+                                Examples:
+                                <p style="margin-top: 5px;">Alternative outfit (same pose) → alternative version<br>
+                                    Slight hand/head rotation → alternative version<br>
+                                    Completely new pose or new composition → separate commission<br>
+                                </p>
+                            </li>
+                        </ul>
                         <h3 id="payments">Refunds</h3>
                         <ul>
                             <li>
@@ -517,10 +631,8 @@
                             <li>Sketch creation</li>
                             <li>Sketch approval</li>
                             <li>Invoice & payment</li>
-                            <li>Color stage</li>
-                            <li>Color approval</li>
-                            <li>Final rendering</li>
-                            <li>Final approval</li>
+                            <li>Render/color stage</li>
+                            <li>Render/color approval</li>
                             <li>Delivery</li>
                         </ol>
                         <h3 id="payments">Revisions</h3>
@@ -541,73 +653,79 @@
 
     <script>
 
-        async function loadSheet(sheetID, gid=0) {
-            const csvUrl = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:csv&gid=${gid}`;
+        // async function loadSheet(sheetID, gid = 0) {
+        //     const csvUrl = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:csv&gid=${gid}`;
 
-            try {
-                const response = await fetch(csvUrl);
-                if (!response.ok) {
-                    throw new Error('Failed to fetch the data. Ensure the sheet is published and shared as "Anyone with the link can view".');
-                }
-                const csvText = await response.text();
-                return csvText;
-            } catch (error) {
-                alert(error.message);
-            }
-        }
+        //     try {
+        //         const response = await fetch(csvUrl);
+        //         if (!response.ok) {
+        //             throw new Error('Failed to fetch the data. Ensure the sheet is published and shared as "Anyone with the link can view".');
+        //         }
+        //         const csvText = await response.text();
+        //         return csvText;
+        //     } catch (error) {
+        //         alert(error.message);
+        //     }
+        // }
 
-        // loadSheet("161wVpZazv9KSGAKEDiND0k0i4X6ewFexgrmA3AatsfE")
+        // // loadSheet("161wVpZazv9KSGAKEDiND0k0i4X6ewFexgrmA3AatsfE")
 
-        async function fillData() {
-            const csv = await loadSheet("161wVpZazv9KSGAKEDiND0k0i4X6ewFexgrmA3AatsfE")
+        // async function fillData() {
+        //     const csv = await loadSheet("161wVpZazv9KSGAKEDiND0k0i4X6ewFexgrmA3AatsfE")
 
-            const regex = /,(?=(?:[^"]*"[^"]*")*(?![^"]*"))/;
+        //     const regex = /,(?=(?:[^"]*"[^"]*")*(?![^"]*"))/;
 
-            const rows = csv.split('\n');
+        //     const rows = csv.split('\n');
 
-            rows.forEach((row, index) => {
-                const columns = row.split(regex);
-                const key = columns[0].replaceAll('"', '').trim()
-                const value = columns[1].replaceAll('"', '').trim()
-                console.log(key, value);
+        //     rows.forEach((row, index) => {
+        //         const columns = row.split(regex);
+        //         const key = columns[0].replaceAll('"', '').trim()
+        //         const value = columns[1].replaceAll('"', '').trim()
+        //         console.log(key, value);
 
-                $(`#${key}`).text(value);
-                console.log(columns);
-            })
-        }
-        async function fillSlotInfo() {
-            const csv = await loadSheet("161wVpZazv9KSGAKEDiND0k0i4X6ewFexgrmA3AatsfE", 649449172)
+        //         $(`#${key}`).text(value);
+        //         console.log(columns);
+        //     })
+        // }
+        // async function fillSlotInfo() {
+        //     const csv = await loadSheet("161wVpZazv9KSGAKEDiND0k0i4X6ewFexgrmA3AatsfE", 649449172)
 
-            const regex = /,(?=(?:[^"]*"[^"]*")*(?![^"]*"))/;
+        //     const regex = /,(?=(?:[^"]*"[^"]*")*(?![^"]*"))/;
 
-            const rows = csv.split('\n');
+        //     const rows = csv.split('\n');
 
-            let slots = ""
-            rows.forEach((row, index) => {
-                slots += `<li>${row.replaceAll('"', '').trim()}</li>`
-            })
-            $('#slots').html(slots);
-        }
+        //     let slots = ""
+        //     rows.forEach((row, index) => {
+        //         slots += `<li>${row.replaceAll('"', '').trim()}</li>`
+        //     })
+        //     $('#slots').html(slots);
+        // }
+        // async function fillCompletedCommissions() {
+        //     const csv = await loadSheet("161wVpZazv9KSGAKEDiND0k0i4X6ewFexgrmA3AatsfE", 155662443)
 
-        fillData();
-        fillSlotInfo();
+        //     const regex = /,(?=(?:[^"]*"[^"]*")*(?![^"]*"))/;
 
-        // $(document).on('wheel', function(event) {
-        //     var $scrollableDiv = $('#table-container');
+        //     const rows = csv.split('\n');
 
-        //     // Отменяем стандартное поведение прокрутки
-        //     event.preventDefault();
+        //     let comms = ""
+        //     rows.forEach((row, index) => {
+        //         const columns = row.split(regex);
+        //         const comm_text = columns[0].replaceAll('"', '').trim()
+        //         const comm_url = columns[1].replaceAll('"', '').trim()
 
-        //     // Прокручиваем div в зависимости от направления прокрутки
-        //     $scrollableDiv.scrollTop($scrollableDiv.scrollTop() + event.originalEvent.deltaY);
-        // });
-        // $('.header span').on('click', function(event) {
-        //     target_offset = $(`#row-${gameRow}`).offset(),
-        //     target_top = target_offset.top;
-        //     $('#table-container').animate({
-        //         scrollTop: target_top - $('#table-container').height()/2
-        //     }, 800);
-        // });
+        //         comms += `<li><a href="${comm_url}">${comm_text}</a></li>`
+        //     })
+        //     $('#comms').html(comms);
+        // }
+
+
+
+        // fillData();
+        // fillSlotInfo();
+        // fillCompletedCommissions();
+        
+        // $(".loading-screen").add("hidden")
+        // $(".container").remove("hidden")
     </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
