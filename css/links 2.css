@@ -159,17 +159,23 @@ h1{
 .link:hover{
     background-color: rgba(83, 48, 99, 0.8);
 }
-i{
+i, img{
     position: absolute;
 
     left: 5px;
     margin-left: 8px;
-    margin-top: 13px;
+    margin-top: 12px;
 
     font-size: 25px;
     
     width: 30px;
+    height: 30px;
     text-align: center;
+    
+    object-fit: contain;
+}
+#vgen-icon{
+    margin-top: 10px;
 }
 a{
     text-decoration: none;
