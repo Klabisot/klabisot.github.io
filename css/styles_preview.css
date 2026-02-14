@@ -91,6 +91,10 @@ li {
     margin: 10px auto;
     border-radius: 15px;
 }
+.info ul{
+    /* width: 100%; */
+    /* margin: auto; */
+}
 u {
     color: #ddd9fd;
     font-weight: bold;
@@ -470,12 +474,13 @@ tr:last-child th:last-child {
 }
 
 ul {
+    padding: 0;
     margin: 0;
-    margin-left: 5px;
-    padding-left: 15px;
+    /* margin-left: 5px; */
+    /* padding-left: 15px; */
     font-size: 17px;
     opacity: 80%;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
     /* list-style-type: "✨"; */
     color: #ddd9fd;
 }

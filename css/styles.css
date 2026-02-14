@@ -361,12 +361,12 @@ tr:last-child th:last-child {
     font-weight: bold;
 }
 
-.additional-options, .additional-versions {
+.additional-options, .additional-versions, .comm-types {
     display: flex;
     flex: 1;
     cursor: default;
 }
-.additional-option, .additional-version {
+.additional-option, .additional-version, .comm-type {
     width: 100%;
     text-align: center;
     padding: 5px;
@@ -379,13 +379,27 @@ tr:last-child th:last-child {
     box-shadow: #ddd9fd 0px 0 4px;
     text-shadow: #ddd9fd 0px 0 2px;
 }
-.additional-option:hover, .additional-version:hover {
+.comm-type{
+    padding: 3px;
+    opacity: 0.4;
+}
+.additional-option:hover, .additional-version:hover, .comm-type:hover {
     background: #47455f;
 }
 .additional-option.active, .additional-version.active {
     background: #ddd9fd;
     color: #262b3f;
     font-weight: bold;
+}
+.comm-type.active{
+    opacity: 1;
+}
+.comm-type p{
+    padding: 0;
+    margin-top: -5px;
+    padding-bottom: 5px;
+    width: 100%;
+    align-items: center;
 }
 .estimated {
     position: absolute;
