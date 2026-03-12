@@ -72,13 +72,14 @@ h3 {
     padding-top: 20px;
     margin-top: 20px;
 }
+li {
+    display: list-item;
+    margin-bottom: 5px;
+}
 li::marker {
     content: "❖ ";
     /* font-size: 18px; */
     /* padding-top: 3px; */
-}
-li {
-    margin-bottom: 5px;
 }
 .info a{
     display: inline-block;
@@ -90,10 +91,6 @@ li {
     width: 140px;
     margin: 10px auto;
     border-radius: 15px;
-}
-.info ul{
-    /* width: 100%; */
-    /* margin: auto; */
 }
 u {
     color: #ddd9fd;
@@ -359,9 +356,6 @@ tr:last-child th:last-child {
 .price:hover {
     background: #47455f;
 }
-.not-blurred .price::before {
-    content: "$";
-}
 .price.active {
     background: #ddd9fd;
     color: #262b3f;
@@ -474,7 +468,7 @@ tr:last-child th:last-child {
 }
 
 ul {
-    padding: 0;
+    padding-left: 15px;
     margin: 0;
     /* margin-left: 5px; */
     /* padding-left: 15px; */
@@ -489,7 +483,6 @@ ul {
 }
 
 .container:after {
-    content: "";
     position: absolute;
     top: 0px;
     left: 0px;
@@ -541,16 +534,7 @@ ul {
     flex-direction: column;
 }
 
-.new-library-item::before {
-    content: "NEW";
-    color: rgb(236, 84, 84);
-    font-weight: bolder;
-}
-.pinned::before {
-    content: "📌";
-    font-weight: bolder;
-    font-size: 14px;
-}
+
 .library-item {
     padding: 5px;
     margin: 5px 0;
