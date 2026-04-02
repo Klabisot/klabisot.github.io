@@ -31,7 +31,7 @@ p {
     opacity: 80%;
 }
 h2 {
-    font-size: 28px;
+    font-size: 34px;
     margin-top: 5px;
 }
 h2,
@@ -236,7 +236,7 @@ h2.header{
     z-index: -1;
 }
 .posts {
-    flex: 0.4;
+    flex: 0.7;
 }
 .post-container {
     height: 100%;
@@ -472,14 +472,20 @@ ul {
     margin: 0;
     /* margin-left: 5px; */
     /* padding-left: 15px; */
-    font-size: 17px;
+    font-size: 21px;
     opacity: 80%;
     /* padding-bottom: 10px; */
     /* list-style-type: "✨"; */
     color: #ddd9fd;
 }
+.info a{
+    font-size: 21px;
+}
 .ul-blocks{
     list-style: none;
+}
+.space{
+    height: 20px;
 }
 
 .container:after {
@@ -644,7 +650,7 @@ ul {
 }
 .preview{
     margin-top: 5px;
-    margin-left: 155px;
+    margin-left: 135px;
 }
 .preview img {
     height: 100%;
@@ -684,6 +690,7 @@ ul {
     bottom: 0;
     width: 16%;
     margin-left: 10px;
+    font-size: 28px;
     text-align: right;
     /* height: 100%; */
     padding-right: 10px;
@@ -706,37 +713,60 @@ ul {
 .preview h2{
     /* padding-left: 10px; */
 }
-.preview h2.price-sketch{
-    width: 40%;
+.preview h2.price-light.open{
+    width: 45%;
     z-index: 100;
 }
-.preview h2.price-light{
-    width: 66.5%;
+.preview h2.price-full.open{
+    width: 84%;
     z-index: 100;
 }
-.preview h2.price-full{
-    width: 93%;
+.preview h2.price-light.skeb{
+    width: 52%;
+    z-index: 100;
+}
+.preview h2.price-full.skeb{
+    width: 91%;
     z-index: 100;
 }
 .preview.head h2 {
     display: inline-block;
-    height: 30%;
+    height: 40%;
 }
 .preview.bust h2 {
     display: inline-block;
-    height: 79%;
+    height: 87%;
 }
 .preview.half h2 {
     display: inline-block;
-    height: 70%;
+    height: 80%;
 }
 .preview.knee h2 {
     display: inline-block;
-    height: 68%;
+    height: 78%;
 }
 .preview.full h2 {
     display: inline-block;
-    height: 80%;
+    height: 90%;
+}
+.open::before{
+    display: block;
+    content: "Default";
+    font-size: 16px;
+    opacity: .75;
+}
+.skeb::before{
+    display: block;
+    content: "Skeb";
+    font-size: 16px;
+    opacity: .75;
+}
+
+.option{
+    padding-right: 75px;
+}
+.option:last-child{
+    padding-right: 0;
 }
 .preview-section .preview h2.border{
     height: 100%;

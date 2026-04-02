@@ -37,6 +37,14 @@
         </div>
     </div>
 
+    <div class="info-window hidden">
+        <div class="info-field">
+            <h2 class="info-header">Test</h2>
+            <p class="info-description">test test test test test test test test test test test test test test test test test test test test test test </p>
+        </div>
+        <div class="info-close"><h3>Close</h3></div>
+    </div>
+
     <div class="container hidden">
         <h2 class="center header">Dreamy Lounge's Commission Sheet</h2>
         <div class="main-content">
@@ -74,7 +82,7 @@
                                         </div>
                                         <div class="comm-type" data-type="surprise">
                                             <h3>Surprise me!</h3>
-                                            <p>aka Skeb-like. No revisions, final result only</p>
+                                            <p>No revisions, final result only</p>
                                         </div>
                                     </div>
                                 </div>
@@ -84,39 +92,39 @@
                                 <table class="not-blurred">
                                     <tr>
                                         <th style="border: none"></th>
-                                        <th class="cols border-here">
+                                        <!-- <th class="cols border-here">
                                             Sketch
-                                        </th>
+                                        </th> -->
                                         <th class="cols">Colored Sketch</th>
                                         <th class="cols">Rendered Illustration</th>
                                     </tr>
                                     <tr class="head">
                                         <th class="label">Headshot</th>
-                                        <th class="price price-sketch">7</th>
+                                        <!-- <th class="price price-sketch">7</th> -->
                                         <th class="price price-light">20</th>
                                         <th class="price price-full">35</th>
                                     </tr>
                                     <tr class="bust">
                                         <th class="label">Bust</th>
-                                        <th class="price price-sketch">10</th>
+                                        <!-- <th class="price price-sketch">10</th> -->
                                         <th class="price price-light">30</th>
                                         <th class="price price-full">50</th>
                                     </tr>
                                     <tr class="half">
                                         <th class="label">Half Body</th>
-                                        <th class="price price-sketch">15</th>
+                                        <!-- <th class="price price-sketch">15</th> -->
                                         <th class="price price-light">40</th>
                                         <th class="price price-full">70</th>
                                     </tr>
                                     <tr class="knee">
                                         <th class="label">Knee Up</th>
-                                        <th class="price price-sketch">20</th>
+                                        <!-- <th class="price price-sketch">20</th> -->
                                         <th class="price price-light">50</th>
                                         <th class="price price-full">85</th>
                                     </tr>
                                     <tr class="full">
                                         <th class="label">Full Body</th>
-                                        <th class="price price-sketch">25</th>
+                                        <!-- <th class="price price-sketch">25</th> -->
                                         <th class="price price-light">60</th>
                                         <th class="price price-full active">100</th>
                                     </tr>
@@ -124,9 +132,9 @@
                                 <table class="blurred">
                                     <tr>
                                         <th style="border: none"></th>
-                                        <th class="cols border-here">
+                                        <!-- <th class="cols border-here">
                                             <span class="hide-text">Sketch</span>
-                                        </th>
+                                        </th> -->
                                         <th class="cols">
                                             <span class="hide-text">Colored Sketch</span>
                                         </th>
@@ -138,9 +146,9 @@
                                         <th class="label">
                                             <span class="hide-text">Headshot</span>
                                         </th>
-                                        <th class="price">
+                                        <!-- <th class="price">
                                             <span class="hide-text">7</span>
-                                        </th>
+                                        </th> -->
                                         <th class="price">
                                             <span class="hide-text">20</span>
                                         </th>
@@ -152,9 +160,9 @@
                                         <th class="label">
                                             <span class="hide-text">Bust</span>
                                         </th>
-                                        <th class="price">
+                                        <!-- <th class="price">
                                             <span class="hide-text">10</span>
-                                        </th>
+                                        </th> -->
                                         <th class="price">
                                             <span class="hide-text">25</span>
                                         </th>
@@ -166,9 +174,9 @@
                                         <th class="label">
                                             <span class="hide-text">Half Body</span>
                                         </th>
-                                        <th class="price">
+                                        <!-- <th class="price">
                                             <span class="hide-text">15</span>
-                                        </th>
+                                        </th> -->
                                         <th class="price">
                                             <span class="hide-text">40</span>
                                         </th>
@@ -180,9 +188,9 @@
                                         <th class="label">
                                             <span class="hide-text">Knee Up</span>
                                         </th>
-                                        <th class="price">
+                                        <!-- <th class="price">
                                             <span class="hide-text">20</span>
-                                        </th>
+                                        </th> -->
                                         <th class="price">
                                             <span class="hide-text">50</span>
                                         </th>
@@ -194,9 +202,9 @@
                                         <th class="label">
                                             <span class="hide-text">Full Body</span>
                                         </th>
-                                        <th class="price">
+                                        <!-- <th class="price">
                                             <span class="hide-text">25</span>
-                                        </th>
+                                        </th> -->
                                         <th class="price">
                                             <span class="hide-text">60</span>
                                         </th>
@@ -210,6 +218,68 @@
                                 Click your desired option
                             </p>
                             
+                            <!-- ================ Commission type ================ -->
+                            <!-- ================ Commission type ================ -->
+                            <!-- ================ Commission type ================ -->
+                            <div class="fieldset-class">
+                                <fieldset class="artwork-type not-blurred">
+                                    <legend><span class="hint" data-info="nsfw">Artwork type (?)</span></legend>
+
+                                    <div class="bg-option">
+                                        <input type="radio" id="def-type" name="artwork-type" value="0" checked />
+                                        <label for="def-type">
+                                            Default
+                                        </label>
+                                    </div>
+                                    <div class="bg-option">
+                                        <div class="complex">
+                                            <input type="radio" id="artistic-type" name="artwork-type" value="0" />
+                                            <label for="artistic-type">
+                                                Artistic nudity
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="bg-option">
+                                        <div class="complex">
+                                            <input type="radio" id="nsfw-type" name="artwork-type" value="50" />
+                                            <label for="nsfw-type">
+                                                NSFW (+50% $)
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+                                <fieldset class="artwork-type blurred">
+                                    <legend><span class="hint" data-info="nsfw">Artwork type (?)</span></legend>
+
+                                    <div class="bg-option">
+                                        <input type="radio" id="def-type" name="artwork-type" value="0" checked />
+                                        <label for="no-bg">
+                                            Default
+                                        </label>
+                                    </div>
+                                    <div class="bg-option">
+                                        <div class="complex">
+                                            <input type="radio" id="art-type" name="artwork-type" value="0" />
+                                            <label for="simple-bg">
+                                                Artistic nudity
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="bg-option">
+                                        <div class="complex">
+                                            <input type="radio" id="nsfw-type" name="artwork-type" value="50" />
+                                            <label for="complex-bg">
+                                                NSFW (+50% $)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <!-- ================ Background ================ -->
+                            <!-- ================ Background ================ -->
+                            <!-- ================ Background ================ -->
                             <div class="fieldset-class">
                                 <fieldset class="bg not-blurred">
                                     <legend>Background</legend>
@@ -226,7 +296,7 @@
                                     </div>
 
                                     <div class="bg-option">
-                                        <div class="complex" style="opacity: 25%">
+                                        <div class="complex">
                                             <input type="radio" id="simple-bg" name="bg" value="20" />
                                             <label for="simple-bg">
                                                 Simple background (+20%
@@ -240,7 +310,7 @@
                                     </div>
 
                                     <div class="bg-option">
-                                        <div class="complex" style="opacity: 25%">
+                                        <div class="complex">
                                             <input type="radio" id="complex-bg" name="bg" value="75" />
                                             <label for="complex-bg">
                                                 Complex background (+75%
@@ -294,6 +364,10 @@
                                     </div>
                                 </fieldset>
                             </div>
+
+                            <!-- ================ Additional characters ================ -->
+                            <!-- ================ Additional characters ================ -->
+                            <!-- ================ Additional characters ================ -->
                             <div class="fieldset-class">
                                 <fieldset class="additional">
                                     <legend>Additional characters</legend>
@@ -346,9 +420,12 @@
                                     </p>
                                 </fieldset>
                             </div>
+                            <!-- ================ Alt versions ================ -->
+                            <!-- ================ Alt versions ================ -->
+                            <!-- ================ Alt versions ================ -->
                             <div class="fieldset-class">
                                 <fieldset class="additional">
-                                    <legend>Alternative versions</legend>
+                                    <legend><span class="hint" data-info="alternative">Alternative versions (?)</span></legend>
 
                                     <input hidden type="number" id="additional-vers" name="bg" value="1" />
                                     <div class="additional-versions">
@@ -382,7 +459,7 @@
                                     </p>
                                 </fieldset>
                                 <fieldset class="additional blurred">
-                                    <legend>Alternative versions</legend>
+                                    <legend><span class="hint" data-info="alternative">Alternative versions (?)</span></legend>
 
                                     <input hidden type="number" id="additional-vers" name="bg" value="1" />
                                     <div class="additional-versions">
@@ -441,34 +518,29 @@
                                 <ul>
                                     <li>Females</li>
                                     <li>Something cute or/and beautiful</li>
-                                    <li>Artistic nudity</li>
+                                    <li><span class="hint" data-info="nsfw">Artistic nudity / NSFW (?)</span></li>
                                 </ul>
                             </div>
 
                             <div class="info">
                                 <h3>Won't draw</h3>
                                 <ul>
-                                    <li>
-                                        NSFW (sexualized connotation, sex
-                                        scenes, fetishes, and so on)
-                                    </li>
-                                    <li>Males</li>
-                                    <li>Furry</li>
                                     <li>Non-humanoid characters</li>
+                                    <li>Violence, gore, extreme fetishes</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="info-container">
-                            <div class="info">
+                            <!-- <div class="info">
                                 <h3>Slots (<texto id="slots_available">3</texto>/<texto id="max_slots">3</texto>)</h3>
                                 <ul id="slots">
-                                    <!-- <li>[2/9] Sketch creation</li>
+                                     <li>[2/9] Sketch creation</li>
                                     <li>Free slot</li>
-                                    <li>Free slot</li> -->
+                                    <li>Free slot</li> 
                                 </ul>
                                 <p style="font-size: 14px; margin-bottom: 10px;">Will be updated as I progress</p>
                                 <br />
-                            </div>
+                            </div> -->
                             <div class="info">
                                 <h3>Deadlines</h3>
                                 <ul>
@@ -515,9 +587,6 @@
                                     Full prepayment for "Surprise Me!" commission type
                                 </li>
                                 <li>
-                                    Full prepayment for sketch positions
-                                </li>
-                                <li>
                                     Maximum of 3 additional characters. Each
                                     character is +50% to base price
                                 </li>
@@ -562,7 +631,7 @@
                                 I reserve the right to post commissioned
                                 artwork in my socials unless otherwise
                                 agreed. I&#39;ll add a watermark
-                                indicating artwork as commissioned
+                                indicating artwork as commissioned. NSFW works more likely won't be posted
                             </li>
                             <li>
                                 References are necessary for complex
@@ -611,7 +680,7 @@
                             <li>[Optional] Examples of artworks or vibes you want to convey</li>
                             <li>[Optional] Preferred image size or resolution</li>
                         </ul> -->
-                        <h3 id="payments">Alternative versions</h3>
+                        <!-- <h3 id="payments">Alternative versions</h3>
                         <ul>
                             <li>
                                 Alternative versions refer to variations of the same artwork, such
@@ -639,7 +708,7 @@
                                     Completely new pose or new composition → separate commission<br>
                                 </p>
                             </li>
-                        </ul>
+                        </ul> -->
                         <h3 id="payments">Refunds</h3>
                         <ul>
                             <li>
