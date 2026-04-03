@@ -92,6 +92,17 @@ li::marker {
     margin: 10px auto;
     border-radius: 15px;
 }
+.info img.svg{
+    display: inline-block;
+    height: 13px;
+    width: auto;
+    margin: 0;
+    margin-left: -1px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: white;
+}
 u {
     color: #ddd9fd;
     font-weight: bold;
@@ -241,7 +252,7 @@ h2.header{
 .post-container {
     height: 100%;
     overflow: scroll;
-    padding: 15px 5px;
+    padding: 5px 5px;
 }
 .another-container {
     padding-bottom: 120px;
@@ -633,7 +644,6 @@ ul {
 }
 
 .nasral {
-    padding-top: 10px;
     display: flex;
     height: 100%;
     overflow: hidden;
@@ -904,3 +914,18 @@ ul {
 *{
     overflow-x: hidden;
 } */
+
+h2{
+    margin-top: 5px;
+}
+
+.cards{
+    display: inline-block;
+}
+.cgcZCP{
+    display: inline-block;
+    height: 25px;
+    margin-right: 3px;
+    vertical-align: bottom;
+    line-height: 25px;
+}

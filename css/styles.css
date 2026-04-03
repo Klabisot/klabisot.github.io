@@ -920,6 +920,28 @@ ul, ol {
     background-color: rgba(5, 2, 7, 0.9);
 }
 
+.cards{
+    display: inline-block;
+}
+.cgcZCP{
+    display: inline-block;
+    height: 20px;
+    margin-right: 3px;
+    vertical-align: bottom;
+    line-height: 25px;
+}
+.svg{
+    display: inline-block;
+    height: 10px;
+    width: auto;
+    margin: 0;
+    margin-left: -1px;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid gray;
+    background-color: white;
+}
+
 .hidden{
     /* display: none; */
     opacity: 0;
