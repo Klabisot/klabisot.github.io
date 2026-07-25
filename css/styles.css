@@ -25,7 +25,7 @@ p, li, a, u, .hint {
     cursor: pointer;
 }
 
-p, .info p, .info a, .info i {
+p, .info p {
     margin: 0;
     padding: 0;
     font-size: 13px;
@@ -887,6 +887,7 @@ tr:last-child th:last-child {
 }
 .contacts i {
     margin-right: 4px;
+    color: #ddd9fd;
 }
 
 /* ===== Responsive ===== */
