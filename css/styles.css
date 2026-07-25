@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 p, li, a, u, .hint {
     line-height: 115%;
     color: #ddd9fd;
+    font-size: 13px;
 }
 
 .hint {
@@ -24,15 +25,12 @@ p, li, a, u, .hint {
     cursor: pointer;
 }
 
-p, .info a, .info i {
+p, .info p, .info a, .info i {
     margin: 0;
     padding: 0;
     font-size: 13px;
     opacity: 80%;
-}
-
-.info a {
-    font-size: 15px;
+    color: #ddd9fd;
 }
 
 h2 {
@@ -156,37 +154,147 @@ body {
     overflow: hidden;
 }
 
-.library,
-.posts {
-    flex: 1;
-    margin: 10px;
-    margin-bottom: 0;
-    padding: 5px 20px;
-    overflow-y: auto;
+.border{
     border: 1px dashed #ddd9fd;
     border-radius: 20px;
     background-color: rgba(14, 11, 22, 0.4);
 }
 
+.library,
+.posts {
+    flex: 1;
+    margin-bottom: 0;
+    margin: 10px;
+    padding: 5px 20px;
+    overflow-y: auto;
+}
+
 .posts {
     flex: 0.6;
+    padding: 0;
 }
 
 .post-container {
     height: 100%;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
-    -webkit-mask: linear-gradient(white 85%, transparent);
-    mask: linear-gradient(white 85%, transparent);
 }
 
 .another-container {
-    margin: auto 0;
-    padding-bottom: 60px;
+    flex: 1;
+    overflow-y: auto;
+    padding: 0 20px;
     padding-top: 15px;
-    width: 100%;
 }
+
+.scroll-gradient {
+    position: sticky;
+    bottom: 0;
+    flex-shrink: 0;
+    height: 80px;
+    margin: 0 -20px;
+    background: linear-gradient(to bottom, transparent, rgba(14, 11, 22, 1));
+    pointer-events: none;
+}
+
+/* ===== Payment block ===== */
+.payment-block {
+    /* flex: 1; */
+    position: relative;
+    top: 0;
+    z-index: 2;
+    flex-shrink: 0;
+    padding: 5px 14px 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+    /* margin-bottom: 10px;
+    margin-top: 0; */
+    background: rgba(14, 11, 22, 0.4);
+    order: 1;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.payment-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 10px;
+    border-radius: 15px;
+    background: rgba(221, 217, 253, 0.08);
+    border: 1px solid rgba(221, 217, 253, 0.2);
+    transition: background 0.2s;
+    text-decoration: none;
+}
+
+.payment-link:hover {
+    background: rgba(221, 217, 253, 0.18);
+}
+
+.payment-link .cards {
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    margin-top: 6px;
+    flex-wrap: wrap;
+}
+
+.payment-link .cgcZCP {
+    height: 15px;
+}
+
+.payment-link span {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.payment-link img{
+    height: 35px;
+}
+
+.vgen-btn{
+    /* background-color: #B8FF26DD; */
+    background-color: #582d48dd;
+    /* background-color: #555; */
+}
+
+.vgen-btn span {
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.coming-soon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px dashed rgba(221, 217, 253, 0.25);
+    background: rgba(221, 217, 253, 0.04);
+    font-family: 'Cause', cursive;
+    font-size: 14px;
+    opacity: 0.5;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.payment-terms p {
+    font-size: 13px;
+    opacity: 70%;
+    line-height: 140%;
+    margin: 0;
+}
+
+/* ===== Another Stuff ===== */
 
 .library {
     position: relative;
@@ -211,8 +319,13 @@ body {
     flex-direction: column;
 }
 
-.option-selector-container > .accordion {
-    flex-shrink: 0;
+.options-scroll {
+    flex: 1;
+    padding-bottom: 80px;
+    overflow-y: auto;
+    min-height: 0;
+    -webkit-mask: linear-gradient(white 90%, transparent);
+    mask: linear-gradient(white 90%, transparent);
 }
 
 .preview {
@@ -585,6 +698,7 @@ tr:last-child th:last-child {
 
 /* ===== Screenshot button ===== */
 .screenshot-btn {
+    position: relative;
     margin-top: auto;
     margin-bottom: 5px;
     background: rgba(221, 217, 253, 0.08);
@@ -601,6 +715,27 @@ tr:last-child th:last-child {
 }
 .screenshot-btn:hover {
     background: rgba(221, 217, 253, 0.18);
+}
+
+.screenshot-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(14, 11, 22, 0.95);
+    color: #ddd9fd;
+    font-size: 11px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.screenshot-btn:hover::after {
+    opacity: 1;
 }
 
 /* ===== Estimated price ===== */
@@ -743,15 +878,13 @@ tr:last-child th:last-child {
 .contacts {
     display: flex;
     gap: 15px;
-    margin-top: 8px;
-    justify-content: center;
+    /* margin-top: 8px; */
+    /* justify-content: center; */
 }
 
 .contacts a {
-    font-size: 15px;
     text-decoration: none;
 }
-
 .contacts i {
     margin-right: 4px;
 }
@@ -792,8 +925,11 @@ tr:last-child th:last-child {
         padding: 5px;
     }
     .posts{
-        padding: 0px 30px;
-        width: calc(100% - 70px);
+        padding: 5px 0;
+        /* margin: 0px 5px; */
+        width: calc(100% - 10px);
+        /* padding: 0px 30px; */
+        /* width: calc(100% - 70px); */
     }
 
     .label{
@@ -807,6 +943,12 @@ tr:last-child th:last-child {
 
     .posts {
         height: auto;
+    }
+
+    .payment-block {
+        order: 0;
+        margin-top: 0;
+        margin-bottom: 10px;
     }
 }
 

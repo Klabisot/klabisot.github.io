@@ -17,6 +17,25 @@ $(function () {
 
     var prices = prices_open;
 
+    var vgenLinks = {
+        open: {
+            full: "https://vgen.co/klabisot/service/-rendered-illustration-from-headshot-to-fullbody-/caa6be18-163d-4cb7-9ecd-143f6dffc5bb",
+            light: "https://vgen.co/klabisot/service/-colored-sketch-from-headshot-to-fullbody-/68723d07-6049-40d9-b4a5-cdc532f2e603"
+        },
+        surprise: {
+            full: "https://vgen.co/klabisot/service/-surprise-me-rendered-illustration-from-headshot-to-fullbody-/c7a99e55-45ac-46a9-a8ee-8a25e572eae8",
+            light: "https://vgen.co/klabisot/service/-surprise-me-colored-sketch-from-headshot-to-fullbody-/3e131ef1-e693-4293-9be1-a025b2bca5c4"
+        }
+    };
+
+    function updatePaymentLink() {
+        var type = $(".comm-type.active").data("type");
+        var isFull = $(".price.active").hasClass("price-full");
+        var key = isFull ? "full" : "light";
+        var url = vgenLinks[type][key];
+        $("#payment-vgen").attr("href", url);
+    }
+
     var option_to_class = {
         'Headshot': 'headshot',
         'Bust': 'bust',
@@ -54,6 +73,7 @@ $(function () {
 
         $(".choosen-options").text(detail);
         $(".estimated-price").text("~ $" + total);
+        updatePaymentLink();
 
         active_option_body = label;
 
@@ -70,6 +90,7 @@ $(function () {
         $(".price").removeClass("active");
         $(this).addClass("active");
         recalculate();
+        updatePaymentLink();
     });
 
     $(document).on("click", ".comm-type", function () {
@@ -90,6 +111,7 @@ $(function () {
         $(".commission-steps").html($(this).data("type") === "surprise" ? stepsSurprise : stepsOpen);
 
         recalculate();
+        updatePaymentLink();
     });
 
     $(document).on("click", ".opt-btn", function () {
