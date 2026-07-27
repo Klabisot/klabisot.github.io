@@ -15,16 +15,24 @@
         for (var i = 0; i < config.circle.amount; i++) {
             var el = document.createElement('div');
             var size = rand(40, 120);
-            el.className = 'particle circle drift';
-            el.style.cssText = 'left:' + rand(0, 100) + '%;top:' + rand(0, 100) + '%;width:' + size + 'px;height:' + size + 'px;animation-duration:' + rand(45, 80) + 's;animation-delay:-' + rand(0, 80) + 's';
+            var driftDur = rand(45, 80);
+            var driftDelay = -rand(0, 80);
+            var flickerDur = rand(12, 20);
+            var flickerDelay = rand(0, 5);
+            el.className = 'particle circle';
+            el.style.cssText = 'left:' + rand(0, 100) + '%;top:' + rand(0, 100) + '%;width:' + size + 'px;height:' + size + 'px;animation-name:drift,flicker;animation-duration:' + driftDur + 's,' + flickerDur + 's;animation-delay:' + driftDelay + 's,' + flickerDelay + 's;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite';
             container.appendChild(el);
         }
 
         for (var i = 0; i < config.line.amount; i++) {
             var el = document.createElement('div');
             var len = rand(20, 60);
-            el.className = 'particle line line-drift';
-            el.style.cssText = 'left:' + rand(0, 100) + '%;top:' + rand(0, 100) + '%;width:' + len + 'px;animation-duration:' + rand(45, 80) + 's;animation-delay:-' + rand(0, 80) + 's';
+            var driftDur = rand(45, 80);
+            var driftDelay = -rand(0, 80);
+            var flickerDur = rand(12, 20);
+            var flickerDelay = rand(0, 5);
+            el.className = 'particle line';
+            el.style.cssText = 'left:' + rand(0, 100) + '%;top:' + rand(0, 100) + '%;width:' + len + 'px;animation-name:line-drift,flicker;animation-duration:' + driftDur + 's,' + flickerDur + 's;animation-delay:' + driftDelay + 's,' + flickerDelay + 's;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite';
             container.appendChild(el);
         }
     }
