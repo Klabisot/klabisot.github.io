@@ -300,14 +300,14 @@ body {
     position: relative;
 }
 
-.nasral {
+.calc-body {
     display: flex;
     height: 100%;
     overflow: hidden;
     column-gap: 10px;
 }
 
-.nasral > * {
+.calc-body > * {
     display: inline-block;
 }
 
@@ -937,7 +937,7 @@ tr:last-child th:last-child {
         padding: 0 7px;
     }
 
-    .nasral {
+    .calc-body {
         width: 100%;
         height: auto;
     }
@@ -972,7 +972,7 @@ tr:last-child th:last-child {
         display: none;
     }
 
-    .nasral {
+    .calc-body {
         display: block;
     }
 

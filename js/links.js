@@ -92,18 +92,58 @@ var moodText = '';
 // === Currently Listening ===
 (function() {
     var tracks = [
-        { artist: 'Toby Fox', track: 'A CYBER\'S WORLD?', youtube: 'EM8WM9hUFO8' },
+        { artist: 'Toby Fox', track: 'Scarlet Forest', youtube: '6P5iPI1FjO8' },
+        { artist: 'Not Secured,Loose Ends', track: 'Lie-and-Black-and-White', youtube: 'UaLNTSPScd4' },
+        { artist: 'Not Secured,Loose Ends', track: 'ミニマルロンド (2020)', youtube: 'oqFDsYttj4I' },
+        { artist: 'KAQRIYOTERROR', track: 'アイデンティティークライシス (FF Ver.)', youtube: 'lNoahbOVxoE' },
+        { artist: 'KAQRIYOTERROR', track: 'Who are U?', youtube: 'wm4BfK3dTR4' },
+        { artist: 'TOKYO TEFUTEFU', track: 'シスカタルシス', youtube: 'dXoZAq02IEw' },
     ];
-    var current = tracks[Math.floor(Math.random() * tracks.length)];
+    var currentIndex = Math.floor(Math.random() * tracks.length);
 
     var trackEl = document.querySelector('.np-track');
     var artistEl = document.querySelector('.np-artist');
     var playBtn = document.getElementById('np-play');
     var playerEl = document.getElementById('np-player');
+    var tracklistEl = document.getElementById('np-tracklist');
+    var tracksBtn = document.getElementById('np-tracks-btn');
     if (!trackEl || !playBtn || !playerEl) return;
 
-    trackEl.textContent = current.track;
-    artistEl.textContent = current.artist;
+    function updateTrackUI() {
+        trackEl.textContent = tracks[currentIndex].track;
+        artistEl.textContent = tracks[currentIndex].artist;
+        var items = tracklistEl ? tracklistEl.querySelectorAll('.np-track-item') : [];
+        items.forEach(function(item, i) {
+            item.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    updateTrackUI();
+
+    if (tracklistEl) {
+        tracks.forEach(function(t, i) {
+            var item = document.createElement('div');
+            item.className = 'np-track-item' + (i === currentIndex ? ' active' : '');
+            item.innerHTML = '<span class="np-tl-track">' + t.track + '</span><span class="np-tl-artist">' + t.artist + '</span>';
+            item.addEventListener('click', function() {
+                currentIndex = i;
+                updateTrackUI();
+                if (player && player.loadVideoById) {
+                    player.loadVideoById(tracks[currentIndex].youtube);
+                    playing = true;
+                    playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                    playerEl.classList.add('open');
+                }
+            });
+            tracklistEl.appendChild(item);
+        });
+    }
+
+    if (tracksBtn && tracklistEl) {
+        tracksBtn.addEventListener('click', function() {
+            tracklistEl.classList.toggle('open');
+        });
+    }
 
     var player = null;
     var playing = false;
@@ -116,11 +156,13 @@ var moodText = '';
         player = new YT.Player('np-player', {
             height: '160',
             width: '100%',
-            videoId: current.youtube,
+            videoId: tracks[currentIndex].youtube,
             playerVars: { autoplay: 0, controls: 0 },
             events: {
                 onReady: function() {
-                    player.setVolume(20);
+                    var savedVol = parseInt(localStorage.getItem('dl-volume') || '20');
+                    player.setVolume(savedVol);
+                    volumeSlider.value = savedVol;
                     playBtn.style.display = 'flex';
                 },
             },
@@ -130,7 +172,10 @@ var moodText = '';
     var volumeSlider = document.getElementById('np-volume');
     if (volumeSlider) {
         volumeSlider.addEventListener('input', function() {
-            if (player && player.setVolume) player.setVolume(parseInt(this.value));
+            if (player && player.setVolume) {
+                player.setVolume(parseInt(this.value));
+                localStorage.setItem('dl-volume', this.value);
+            }
         });
     }
 
@@ -233,5 +278,21 @@ var moodText = '';
         }
         sendBtn.disabled = false;
         sendBtn.textContent = 'Send';
+    });
+})();
+
+// === Title Easter Egg ===
+(function() {
+    var h1 = document.querySelector('.artist-name h1');
+    if (!h1) return;
+    var original = h1.textContent;
+    var easterEggs = ['you like my place?', 'welcome, friend ✿', 'glad you\'re here', 'have a nice day~'];
+    var cooldown = false;
+    h1.style.cursor = 'pointer';
+    h1.addEventListener('click', function() {
+        if (cooldown) return;
+        cooldown = true;
+        h1.textContent = easterEggs[Math.floor(Math.random() * easterEggs.length)];
+        setTimeout(function() { h1.textContent = original; cooldown = false; }, 2000);
     });
 })();
