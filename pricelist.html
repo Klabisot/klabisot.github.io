@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css?cache=cockbuster4">
-    <link rel="stylesheet" href="css/particles.css?cache=cockbuster4">
+    <link rel="stylesheet" href="css/styles.css?cache=cockbuster55">
+    <link rel="stylesheet" href="css/particles.css?cache=cockbuster55">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -49,12 +49,12 @@
 
                     <div class="option-selector-container">
                         <div class="options-scroll">
-                            <div class="comm-types">
-                                <div class="comm-type active" data-type="open">
+                            <div class="comm-types collapsed">
+                                <div class="comm-type" data-type="open">
                                     <h3>Default</h3>
-                                    <p>Sketch revision and edits, then final result</p>
+                                    <p>Sketch revision and sketch edits, then final result</p>
                                 </div>
-                                <div class="comm-type" data-type="surprise">
+                                <div class="comm-type active" data-type="surprise">
                                     <h3>Surprise me! (or Skeb)</h3>
                                     <p>No revisions, final result only</p>
                                 </div>
@@ -68,28 +68,28 @@
                                 </tr>
                                 <tr class="head">
                                     <th class="label">Headshot</th>
-                                    <th class="price price-light">20</th>
-                                    <th class="price price-full">35</th>
+                                    <th class="price price-light">12</th>
+                                    <th class="price price-full">28</th>
                                 </tr>
                                 <tr class="bust">
                                     <th class="label">Bust</th>
-                                    <th class="price price-light">30</th>
-                                    <th class="price price-full">50</th>
+                                    <th class="price price-light">20</th>
+                                    <th class="price price-full">40</th>
                                 </tr>
                                 <tr class="half">
                                     <th class="label">Half Body</th>
-                                    <th class="price price-light">40</th>
-                                    <th class="price price-full">70</th>
+                                    <th class="price price-light">28</th>
+                                    <th class="price price-full">55</th>
                                 </tr>
                                 <tr class="knee">
                                     <th class="label">Knee Up</th>
-                                    <th class="price price-light">50</th>
-                                    <th class="price price-full">85</th>
+                                    <th class="price price-light">35</th>
+                                    <th class="price price-full">65</th>
                                 </tr>
                                 <tr class="full">
                                     <th class="label">Full Body</th>
-                                    <th class="price price-light">60</th>
-                                    <th class="price price-full active">100</th>
+                                    <th class="price price-light">45</th>
+                                    <th class="price price-full active">80</th>
                                 </tr>
                             </table>
 
@@ -154,6 +154,7 @@
                             </div>
                         </div>
 
+                        <button class="full-pricelist-toggle" id="full-pricelist-toggle">show full pricelist</button>
 
                         <div class="estimated">
                             <p class="choosen-options">Headshot & Colored Sketch ($20)</p>
@@ -238,8 +239,8 @@
 
                         <div class="info">
                             <h3>Payment</h3>
-                            <p>Full payment after sketch approval for "Default"</p>
-                            <p>Full prepayment for "Surprise Me!"</p>
+                            <p class="payment-open">Full payment after sketch approval for "Default"</p>
+                            <p class="payment-surprise">Full prepayment for "Surprise Me!"</p>
                         </div>
 
 
@@ -306,12 +307,11 @@
                             </div>
                             <div class="accordion-content">
                                 <ol class="commission-steps">
-                                    <li>Discussion of your idea and references</li>
+                                    <li>Submission of your idea and references</li>
+                                    <li>Invoice and payment</li>
                                     <li>Sketch creation</li>
-                                    <li>Sketch approval</li>
-                                    <li>Invoice & payment</li>
-                                    <li>Render/color stage</li>
-                                    <li>Render/color approval</li>
+                                    <li>Rendering/coloring</li>
+                                    <li>Rendering/coloring approval</li>
                                     <li>Delivery</li>
                                 </ol>
                             </div>
@@ -363,8 +363,8 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="js/scripts.js?cache=cockbuster4"></script>
-    <script src="js/background.js?cache=cockbuster4"></script>
+    <script src="js/scripts.js?cache=cockbuster55"></script>
+    <script src="js/background.js?cache=cockbuster55"></script>
 </body>
 
 </html>

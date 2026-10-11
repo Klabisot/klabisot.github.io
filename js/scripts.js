@@ -15,7 +15,7 @@ $(function () {
         full: { "price-light": 45, "price-full": 80 }
     };
 
-    var prices = prices_open;
+    var prices = prices_surprise;
 
     var vgenLinks = {
         open: {
@@ -93,11 +93,8 @@ $(function () {
         updatePaymentLink();
     });
 
-    $(document).on("click", ".comm-type", function () {
-        $(".comm-type").removeClass("active");
-        $(this).addClass("active");
-
-        prices = $(this).data("type") === "surprise" ? prices_surprise : prices_open;
+    function applyType(type) {
+        prices = type === "surprise" ? prices_surprise : prices_open;
 
         $.each(Object.keys(prices), function (_, shot) {
             $.each(Object.keys(prices[shot]), function (_, render) {
@@ -108,10 +105,18 @@ $(function () {
         var stepsOpen = "<li>Discussion of your idea and references</li><li>Sketch creation</li><li>Sketch approval</li><li>Invoice and payment</li><li>Rendering/coloring</li><li>Rendering/coloring approval</li><li>Delivery</li>";
         var stepsSurprise = "<li>Submission of your idea and references</li><li>Invoice and payment</li><li>Sketch creation</li><li>Rendering/coloring</li><li>Rendering/coloring approval</li><li>Delivery</li>";
 
-        $(".commission-steps").html($(this).data("type") === "surprise" ? stepsSurprise : stepsOpen);
+        $(".commission-steps").html(type === "surprise" ? stepsSurprise : stepsOpen);
+        $(".payment-open").toggle(type === "open");
+        $(".payment-surprise").toggle(type === "surprise");
 
         recalculate();
         updatePaymentLink();
+    }
+
+    $(document).on("click", ".comm-type", function () {
+        $(".comm-type").removeClass("active");
+        $(this).addClass("active");
+        applyType($(this).data("type"));
     });
 
     $(document).on("click", ".opt-btn", function () {
@@ -171,7 +176,17 @@ $(function () {
         $(".info-window").addClass("hidden");
     });
 
-    recalculate();
+    applyType($(".comm-type.active").data("type") || "surprise");
+
+    $("#full-pricelist-toggle").on("click", function () {
+        $(".comm-types").toggleClass("collapsed");
+        $(this).text($(".comm-types").hasClass("collapsed") ? "show full pricelist" : "hide full pricelist");
+    });
+
+    if (location.search.indexOf("show-full") !== -1) {
+        $(".comm-types").removeClass("collapsed");
+        $("#full-pricelist-toggle").text("hide full pricelist");
+    }
 
     $(document).on("click", ".screenshot-btn", function () {
         var calcAccordion = document.querySelector(".option-selector-container .accordion");
